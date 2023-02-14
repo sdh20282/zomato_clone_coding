@@ -56,7 +56,7 @@ table {
 /* custom */
 *, *::before, *::after {
 	box-sizing: border-box;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 a {
