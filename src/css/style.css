@@ -632,6 +632,10 @@ body {
     height: 40px;
 }
 
+.footer01 .footer01AppLink a + a {
+    margin-top: 10px;
+}
+
 .footer01 .footer01AppLink a > img {
     width: 100%;
     height: 100%;
