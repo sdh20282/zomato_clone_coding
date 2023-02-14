@@ -6,83 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zomato</title>
-    <style>
-        body {
-            font-size: 12px;
-        }
-
-        .inline {
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://kit.fontawesome.com/de5e0f7e30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="/">Get the App</a>
-            <ul>
+    <header class="pageHeader">
+        <nav class="headerNav">
+            <a class="headerNavApp" href="/">
+                <i class="fa-solid fa-mobile"></i>
+                Get the App
+            </a>
+            <ul class="headerNavList">
                 <li>
-                    <a href="/">Investor Relations</a>
+                    <a class="headerNavItem" href="/">Investor Relations</a>
                 </li>
                 <li>
-                    <a href="/">Add restaurant</a>
+                    <a class="headerNavItem" href="/">Add restaurant</a>
                 </li>
                 <li>
-                    <button>Log in</button>
+                    <button class="headerNavItem">Log in</button>
                 </li>
                 <li>
-                    <button>Sign up</button>
+                    <button class="headerNavItem">Sign up</button>
                 </li>
             </ul>
         </nav>
         <h1>zomato</h1>
         <p>Discover the best food & drinks in Delhi NCR</p>
-        <div>
-            <div>
-                <img src="" alt="">
-                <p>Ywca, 1, Ashoka Rd, Hanu</p>
-                <button>down</button>
-                <ul>
+        <div class="headerBox">
+            <div class="headerBoxLocation">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <p>Connaught Place Ywca, 1, Ashoka Rd, Hanu</p>
+                <button>
+                    <i class="fa-solid fa-sort-down"></i>
+                </button>
+                <ul class="irOnly">
                     <li>
                         <button>location</button>
                     </li>
                 </ul>
             </div>
-            <form action="/">
-                <img src="" alt="">
-                <label for="search">search</label>
+            <form class="headerBoxForm" action="/">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <label class="irOnly" for="search">search</label>
                 <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
             </form>
         </div>
     </header>
-    <main>
+    <main class="main01">
         <section>
-            <header>
+            <header class="irOnly">
                 <h2>Places</h2>
             </header>
-            <ul>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
+            <ul class="container list01">
+                <li class="list01Item">
+                    <a class="list01Box" href="/">
+                        <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
                         <div>
                             <p><strong>Order Online</strong></p>
                             <p>Stay home and order to your doorstep</p>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
+                <li class="list01Item">
+                    <a class="list01Box" href="/">
+                        <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
                         <div>
                             <p><strong>Dining</strong></p>
                             <p>View the city's favourite dining venus</p>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
+                <li class="list01Item">
+                    <a class="list01Box" href="/">
+                        <img src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
                         <div>
                             <p><strong>Nightlife and Clubs</strong></p>
                             <p>Explore the city's top nightlife outlets</p>
@@ -90,280 +89,313 @@
                     </a>
                 </li>
             </ul>
-            <section>
-                <header>
+            <section class="container section01">
+                <header class="section01Header">
                     <h3>Collections</h3>
                     <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</p>
-                    <a href="/">All collections in Delhi NCR</a>
+                    <a href="/">
+                        All collections in Delhi NCR
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
                 </header>
-                <ul>
-                    <li>
-                        <a href="/">
-                            <img src="" alt="">
-                            <p>18 Places to #BaskInLove</p>
-                            <p>18 Places</p>
+                <ul class="section01List">
+                    <li class="section01ListItem">
+                        <a class="section01ListItemBox" href="/">
+                            <img src="https://images.unsplash.com/photo-1541972184324-d7e22e823db4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                            <div class="section01TextWrap">
+                                <p>18 Places to #BaskInLove</p>
+                                <p>18 Places</p>
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <img src="" alt="">
-                            <p>14 Places to Chill & #DoNothing</p>
-                            <p>14 Places</p>
+                    <li class="section01ListItem">
+                        <a class="section01ListItemBox" href="/">
+                            <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                            <div class="section01TextWrap">
+                                <p>14 Places to Chill & #DoNothing</p>
+                                <p>14 Places</p>
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <img src="" alt="">
-                            <p>16 Serene Rooftop Places</p>
-                            <p>16 Places</p>
+                    <li class="section01ListItem">
+                        <a class="section01ListItemBox" href="/">
+                            <img src="https://images.unsplash.com/photo-1621275471769-e6aa344546d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="">
+                            <div class="section01TextWrap">
+                                <p>16 Serene Rooftop Places</p>
+                                <p>16 Places</p>
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <img src="" alt="">
-                            <p>9 Buzzing Events</p>
-                            <p>9 Places</p>
+                    <li class="section01ListItem">
+                        <a class="section01ListItemBox" href="/">
+                            <img src="https://images.unsplash.com/photo-1520942559232-80c4daf60325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="">
+                            <div class="section01TextWrap">
+                                <p>9 Buzzing Events</p>
+                                <p>9 Places</p>
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </section>
-            <section>
-                <header>
-                    <h3>Popular localities in and around Delhi NCR</h3>
+            <section class="container section02">
+                <header class="section02Header">
+                    <h3>Popular localities in and around <strong>Delhi NCR</strong></h3>
                 </header>
-                <ul>
+                <ul class="section02List">
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Connaught Place</p>
                             <p>242 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Sector 29</p>
                             <p>135 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Sector 18, Noida</p>
                             <p>198 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Rajouri Garden</p>
                             <p>277 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Saket</p>
                             <p>301 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>DLF Cyber City</p>
                             <p>145 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>Golf Course Road</p>
                             <p>155 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox" href="/">
                             <p>DLF Phase 4</p>
                             <p>212 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <button class="section02ListItemBox sectionListButton">
+                            see more
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Delhi University-GTB Nagar</p>
                             <p>140 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Indirapuram</p>
                             <p>692 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Vasant Kunj</p>
                             <p>283 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Greater Kailash 1 (GK1)</p>
                             <p>90 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Chanakyapuri</p>
                             <p>99 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Rohini</p>
                             <p>994 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Janpath</p>
                             <p>42 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Hauz Khas Village</p>
                             <p>47 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Sector 38, Noida</p>
                             <p>79 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Janakpuri</p>
                             <p>375 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Sector 50</p>
                             <p>201 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>MG Road</p>
                             <p>167 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>DLF Phase 3</p>
                             <p>367 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Punjabi Bagh</p>
                             <p>160 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Netaji Subhash Place</p>
                             <p>97 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Malviya Nagar</p>
                             <p>348 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Khan Market</p>
                             <p>51 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Karoi Bagh</p>
                             <p>272 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Nehru Place</p>
                             <p>87 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Sohna Road</p>
                             <p>263 places</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a class="section02ListItemBox listItemFold" href="/">
                             <p>Greater Kailash 2 (GK2)</p>
                             <p>99 places</p>
                         </a>
                     </li>
                     <li>
-                        <button>see less</button>
+                        <button class="section02ListItemBox listItemFold sectionListButton">
+                            see less
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
                     </li>
                 </ul>
             </section>
-            <article>
-                <header>
-                    <h3>Get the Zomato app</h3>
-                    <p>We will send you a link, open it on your phone to download the app</p>
-                </header>
-                <form action="/">
-                    <input type="radio" name="way" id="forEmail">
-                    <label for="forEmail">Email</label>
-                    <input type="radio" name="way" id="forPhone">
-                    <label for="forPhone">Phone</label>
-                    <fieldset>
-                        <legend>using email</legend>
-                        <label for="emailLabel">email</label>
-                        <input type="email" id="emailLabel" placeholder="Email">
-                    </fieldset>
-                    <fieldset>
-                        <legend>using phone</legend>
-                        <button>+91</button>
-                        <ul>
-                            <li>
-                                <button>+91</button>
-                            </li>
-                            <li>
-                                <button>+60</button>
-                            </li>
-                            <li>
-                                <button>+63</button>
-                            </li>
-                            <li>
-                                <button>+94</button>
-                            </li>
-                        </ul>
-                        <label for="phoneLabel">email</label>
-                        <input type="text" id="phoneLabel" placeholder="type here">
-                    </fieldset>
-                    <button>share app link</button>
-                </form>
-                <article>
-                    <header>
-                        <h4>Download app from</h4>
+            <article class="article01">
+                <img src="https://b.zmtcdn.com/data/o2_assets/a500ffc2ab483bc6a550aa635f4e55531648107832.png" alt="">
+                <div class="article01Right">
+                    <header class="article01Header">
+                        <h3>Get the Zomato app</h3>
+                        <p>We will send you a link, open it on your phone to download the app</p>
                     </header>
-                    <a href="/">google play</a>
-                    <a href="/">app store</a>
-                </article>
+                    <form class="article01Form" action="/">
+                       <fieldset class="article01FormRadio">
+                            <input type="radio" name="way" id="forEmail" checked>
+                            <label for="forEmail">Email</label>
+                            <input type="radio" name="way" id="forPhone">
+                            <label for="forPhone">Phone</label>
+                       </fieldset >
+                        <fieldset class="article01FormField article01FormEmail selected">
+                            <legend class="irOnly">using email</legend>
+                            <label class="irOnly" for="emailLabel">email</label>
+                            <input type="email" id="emailLabel" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="article01FormField article01FormPhone">
+                            <legend class="irOnly">using phone</legend>
+                            <button>+91</button>
+                            <ul class="irOnly">
+                                <li>
+                                    <button>+91</button>
+                                </li>
+                                <li>
+                                    <button>+60</button>
+                                </li>
+                                <li>
+                                    <button>+63</button>
+                                </li>
+                                <li>
+                                    <button>+94</button>
+                                </li>
+                            </ul>
+                            <label class="irOnly" for="phoneLabel">phone</label>
+                            <input type="text" id="phoneLabel" placeholder="type here">
+                        </fieldset>
+                        <button>share app link</button>
+                    </form>
+                    <article class="applink">
+                        <header class="applinkHeader">
+                            <h4>Download app from</h4>
+                        </header>
+                        <a href="/">
+                            <img src="/assets/images/googleplay.png" alt="">
+                        </a>
+                        <a href="/">
+                            <img src="/assets/images/appstore.PNG" alt="">
+                        </a>
+                    </article>
+                </div>
             </article>
-            <section>
-                <header>
+            <section class="container section03">
+                <header class="section03Header">
                     <h3>Explore options near me</h3>
                 </header>
                 <ul>
                     <li>
-                        <button>Popular cuisines near me</button>
-                        <ul>
+                        <button class="section03ListItemButton">Popular cuisines near me</button>
+                        <ul class="irOnly">
                             <li class="inline">
                                 <a href="/">Bakery food near me</a>
                             </li>
@@ -427,8 +459,8 @@
                         </ul>
                     </li>
                     <li>
-                        <button>Popular restaurant types near me</button>
-                        <ul>
+                        <button class="section03ListItemButton">Popular restaurant types near me</button>
+                        <ul class="irOnly">
                             <li>
                                 <a href="/">Bakeries near me</a>
                             </li>
@@ -501,8 +533,8 @@
                         </ul>
                     </li>
                     <li>
-                        <button>Top Restaurant Chains</button>
-                        <ul>
+                        <button class="section03ListItemButton">Top Restaurant Chains</button>
+                        <ul class="irOnly">
                             <li>
                                 <a href="/">Bikanervala</a>
                             </li>
@@ -551,8 +583,8 @@
                         </ul>
                     </li>
                     <li>
-                        <button>Cities We Deliver To</button>
-                        <ul>
+                        <button class="section03ListItemButton">Cities We Deliver To</button>
+                        <ul class="irOnly">
                             <li>
                                 <a href="/">Delhi NCR</a>
                             </li>
@@ -754,15 +786,39 @@
             </section>
         </section>
     </main>
-    <footer>
+    <footer class="container footer01">
         <h2>zomato</h2>
-        <article>
-            <h3>country</h3>
+        <article class="footerArticleButton">
+            <h3 class="irOnly">language</h3>
             <button>
-                <img src="" alt="">
+                <i class="fa-solid fa-globe"></i>
+                <span>English</span>
+            </button>
+            <ul class="irOnly">
+                <li>
+                    <button>English</button>
+                </li>
+                <li>
+                    <button>Indonesian</button>
+                </li>
+                <li>
+                    <button>Polish</button>
+                </li>
+                <li>
+                    <button>Italian</button>
+                </li>
+                <li>
+                    <button>Vietnamese</button>
+                </li>
+            </ul>
+        </article>
+        <article class="footerArticleButton">
+            <h3 class="irOnly">country</h3>
+            <button>
+                <img src="/assets/images/india.webp" alt="">
                 <span>India</span>
             </button>
-            <ul>
+            <ul class="irOnly">
                 <li>
                     <button>
                         <img src="" alt="">
@@ -909,131 +965,121 @@
                 </li>
             </ul>
         </article>
-        <article>
-            <h3>language</h3>
-            <button>
-                <img src="" alt="">
-                <span>English</span>
-            </button>
-            <ul>
-                <li>
-                    <button>English</button>
-                </li>
-                <li>
-                    <button>Indonesian</button>
-                </li>
-                <li>
-                    <button>Polish</button>
-                </li>
-                <li>
-                    <button>Italian</button>
-                </li>
-                <li>
-                    <button>Vietnamese</button>
-                </li>
-            </ul>
-        </article>
-        <ul>
-            <li>
-                <p>ABOUT ZOMATO</p>
+        <ul class="footer01LargeList">
+            <li class="footer01LargeListItem">
+                <p class="footer01ListItemHeader">ABOUT ZOMATO</p>
                 <ul>
                     <li>
-                        <a href="/">Who We Are</a>
+                        <a class="footer01ListItemTitle" href="/">Who We Are</a>
                     </li>
                     <li>
-                        <a href="/">Blog</a>
+                        <a class="footer01ListItemTitle" href="/">Blog</a>
                     </li>
                     <li>
-                        <a href="/">Work With Us</a>
+                        <a class="footer01ListItemTitle" href="/">Work With Us</a>
                     </li>
                     <li>
-                        <a href="/">Investor Relations</a>
+                        <a class="footer01ListItemTitle" href="/">Investor Relations</a>
                     </li>
                     <li>
-                        <a href="/">Report Fraud</a>
+                        <a class="footer01ListItemTitle" href="/">Report Fraud</a>
                     </li>
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a class="footer01ListItemTitle" href="/">Contact Us</a>
                     </li>
                 </ul>
             </li>
-            <li>
-                <p>ZOMAVERSE</p>
+            <li class="footer01LargeListItem">
+                <p class="footer01ListItemHeader">ZOMAVERSE</p>
                 <ul>
                     <li>
-                        <a href="/">Zomato</a>
+                        <a class="footer01ListItemTitle" href="/">Zomato</a>
                     </li>
                     <li>
-                        <a href="/">Blinkit</a>
+                        <a class="footer01ListItemTitle" href="/">Blinkit</a>
                     </li>
                     <li>
-                        <a href="/">Feeding India</a>
+                        <a class="footer01ListItemTitle" href="/">Feeding India</a>
                     </li>
                     <li>
-                        <a href="/">Hyperpure</a>
+                        <a class="footer01ListItemTitle" href="/">Hyperpure</a>
                     </li>
                     <li>
-                        <a href="/">Zomaland</a>
+                        <a class="footer01ListItemTitle" href="/">Zomaland</a>
                     </li>
                 </ul>
             </li>
-            <li>
-                <p>FOR RESTAURANTS</p>
-                <a href="/">Partner With Us</a>
-                <a href="/">Apps For You</a>
-                <p>FOR ENTERPRISES</p>
-                <a href="/">Zomato For Work</a>
+            <li class="footer01LargeListItem">
+                <p class="footer01ListItemHeader">FOR RESTAURANTS</p>
+                <a class="footer01ListItemTitle" href="/">Partner With Us</a>
+                <a class="footer01ListItemTitle" href="/">Apps For You</a>
+                <p class="footer01ListItemHeader ">FOR ENTERPRISES</p>
+                <a class="footer01ListItemTitle" href="/">Zomato For Work</a>
             </li>
-            <li>
-                <p>LEARN MORE</p>
+            <li class="footer01LargeListItem">
+                <p class="footer01ListItemHeader">LEARN MORE</p>
                 <ul>
                     <li>
-                        <a href="/">Privacy</a>
+                        <a class="footer01ListItemTitle" href="/">Privacy</a>
                     </li>
                     <li>
-                        <a href="/">Security</a>
+                        <a class="footer01ListItemTitle" href="/">Security</a>
                     </li>
                     <li>
-                        <a href="/">Terms</a>
+                        <a class="footer01ListItemTitle" href="/">Terms</a>
                     </li>
                     <li>
-                        <a href="/">Sitemap</a>
+                        <a class="footer01ListItemTitle" href="/">Sitemap</a>
                     </li>
                 </ul>
             </li>
-            <li>
-                <p>SOCIAL LINKS</p>
-                <article>
-                    <h3>social</h3>
+            <li class="footer01LargeListItem">
+                <p class="footer01ListItemHeader">SOCIAL LINKS</p>
+                <article class="socialNetwork">
+                    <h3 class="irOnly">social</h3>
                     <nav>
-                        <ul>
+                        <ul class="socialNetworkList">
                             <li>
-                                <a href="/">linked in</a>
+                                <a href="/">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="/">instagram</a>
+                                <a href="/">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="/">twitter</a>
+                                <a href="/">
+                                    <i class="fa-brands fa-square-twitter"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="/">youtube</a>
+                                <a href="/">
+                                    <i class="fa-brands fa-square-youtube"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="/">facebook</a>
+                                <a href="/">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </a>
                             </li>
                         </ul>
                     </nav>
                 </article>
+                <article class="footer01AppLink">
+                    <header class="irOnly">
+                        <h3>Download app from</h3>
+                    </header>
+                    <a href="/">
+                        <img src="/assets/images/googleplay.png" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="/assets/images/appstore.PNG" alt="">
+                    </a>
+                </article>
             </li>
         </ul>
-        <article>
-            <header>
-                <h3>Download app from</h3>
-            </header>
-            <a href="/">google play</a>
-            <a href="/">app store</a>
-        </article>
         <small>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.</small>
     </footer>
 </body>
