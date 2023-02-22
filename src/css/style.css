@@ -7,7 +7,6 @@
 body {
     font-family: 'helvetica';
     background-color: #f8f8f8;
-    /* font-weight: 200; */
 }
 
 .irOnly {
@@ -18,6 +17,28 @@ body {
     height: 1px;
     margin: -1px;
     overflow: hidden;
+}
+
+.arrowRotate180 {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+.arrowRotate0 {
+    transform: rotate(0deg);
+    transition: all 0.3s;
+}
+
+.show {
+    display: block !important;
+}
+
+.showGrid {
+    display: grid !important;
+}
+
+.buttonSelected {
+    background-color: rgb(237, 244, 255);
 }
 
 .pageHeader {
@@ -74,7 +95,7 @@ body {
     width: 770px;
     height: 54px;
     margin: 0 auto;
-    padding: 17px 14px;
+    padding: 17px 10px;
     background-color: white;
     color: black;
     border-radius: 8px;
@@ -85,12 +106,13 @@ body {
     display: flex;
     align-items: center;
     vertical-align: bottom;
+    position: relative;
 }
 
 .pageHeader .headerBox .headerBoxLocation>i {
     color: lightcoral;
     font-size: 20px;
-    margin-right: 9px;
+    margin-right: 7px;
 }
 
 .pageHeader .headerBox .headerBoxLocation>p {
@@ -102,25 +124,49 @@ body {
     margin-right: 15px;
 }
 
-.pageHeader .headerBox .headerBoxLocation>button {
-    margin-top: -7px;
-    line-height: 1;
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationButton {
     margin-right: 9px;
+    color: #333;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -10px;
+    width: 360px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 18px 18px 18px 15px;
+    text-align: left;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>i {
+    font-size: 14px;
+    line-height: 25px;
+    margin-right: 7px;
+    color: lightcoral;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>span:nth-child(2) {
+    font-size: 17px;
+    line-height: 25px;
+    color: lightcoral;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>span:nth-child(3) {
+    display: block;
+    margin-left: 26px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #aaa;
 }
 
 .pageHeader .headerBox .headerBoxForm {
     display: flex;
     align-items: center;
     flex-grow: 1;
-}
-
-.pageHeader .headerBox .headerBoxForm::before {
-    content: ' ';
-    position: relative;
-    display: inline-block;
-    width: 1px;
-    height: 18px;
-    background-color: #eee;
+    border-left: 2px solid #ddd;
 }
 
 .pageHeader .headerBox .headerBoxForm>i {
@@ -408,13 +454,17 @@ body {
     align-items: center;
     appearance: none;
     background-color: white;
-    margin-right: 10px;
     font: inherit;
     color: currentColor;
     width: 17px;
     height: 17px;
     border: 2px solid #eee;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.article01 .article01Right .article01Form .article01FormRadio input[type="radio"]:hover {
+    border: 1px solid rgb(239, 79, 95);
 }
 
 .article01 .article01Right .article01Form .article01FormRadio input:nth-child(3) {
@@ -439,13 +489,18 @@ body {
     transform: scale(1);
 }
 
+.article01 .article01Right .article01Form .article01FormRadio label {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
 .article01 .article01Right .article01Form .article01FormField {
     display: none;
     width: 292px;
     height: 48px;
     vertical-align: top;
     background-color: white;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
     border-radius: 7px;
 }
 
@@ -454,11 +509,103 @@ body {
 }
 
 .article01 .article01Right .article01Form .article01FormEmail {
-    padding: 13px 12px;
+    position: relative;
+}
+
+.article01 .article01Right .article01Form .article01FormEmail > p {
+    display: none;
+    position: absolute;
+    color: rgb(224, 53, 70);
+    font-size: 11px;
+    bottom: -15px;
+}
+
+.article01 .article01Right .article01Form .article01FormEmail > label {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ccc;
+    background-color: white;
+    top: 16px;
+    left: 5px;
+    padding: 0 7px;
 }
 
 .article01 .article01Right .article01Form .article01FormEmail > input {
+    padding: 8px 12px;
     width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone {
+    position: relative;
+    padding: 10px 7px;
+    
+}
+
+.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneButton {
+    width: 70px;
+    height: 100%;
+    margin-right: 5px;
+    border-right: 2px solid #ccc;
+    color: #777;
+    font-size: 15px;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneButton>i {
+    font-size: 11px;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    overflow-y: scroll;
+    background-color: white;
+    left: 0;
+    top: 53px;
+    border-radius: 7px;
+    padding: 8px 0;
+    z-index: 10;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList button {
+    width: 100%;
+    height: 30px;
+    color: #777;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList button:hover {
+    background-color: #ccc;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone >input {
+    height: 100%;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone >input::placeholder {
+    color: #ccc;
+}
+
+.article01 .article01Right .article01Form .article01FormPhone > p {
+    display: none;
+    position: absolute;
+    color: rgb(224, 53, 70);
+    font-size: 11px;
+    bottom: -15px;
+    left: 0;
+}
+
+.labelMove {
+    transform: scale(0.6) translate(-15px, -40px);
+    transition: transform 0.2s;
+}
+
+.labelBack {
+    transform: scale(1) translate(0, 0);
+    transition: transform 0.2s;
 }
 
 .article01 .article01Right .article01Form > button {
@@ -543,6 +690,17 @@ body {
     border-right: 1px solid black;
 }
 
+.section03 .popularList {
+    width: 1100px;
+    padding: 10px 24px 20px;
+}
+
+.section03 .popularList li {
+    display: inline-block;
+    color: #999;
+    line-height: 30px;
+}
+
 .footer01 {
     padding: 48px 0 22px;
 }
@@ -555,6 +713,7 @@ body {
 
 .footer01 .footerArticleButton {
     float: right;
+    position: relative;
 }
 
 .footer01 .footerArticleButton + .footerArticleButton {
@@ -562,13 +721,12 @@ body {
 }
 
 .footer01 .footerArticleButton > button {
-    width: 115px;
+    /* width: 115px; */
     height: 38px;
-    padding: 3px 7px;
+    padding: 5px 35px 5px 15px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding-right: 25px;
     position: relative;
 }
 
@@ -586,8 +744,101 @@ body {
 
 .footer01 .footerArticleButton > button > img {
     width: 22px;
+    height: 14px;
     vertical-align: top;
     margin-right: 2px;
+    object-fit: cover;
+}
+
+.footer01 .footerArticleButton .languageList {
+    display: none;
+    width: 155px;
+    background-color: white;
+    padding: 14px;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px 0 #ccc;
+    position: absolute;
+    right: -5px;
+    bottom: 47px;
+}
+
+.footer01 .footerArticleButton .languageList::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg);
+    left: 65px;
+}
+
+.footer01 .footerArticleButton .languageList button {
+    width: 100%;
+    padding: 6px;
+    color: #777;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer01 .footerArticleButton .languageList button:hover {
+    background-color: #eee;
+}
+
+.footer01 .footerArticleButton .countryList {
+    display: none;
+    width: 650px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px 0 #ccc;
+    position: absolute;
+    right: -100px;
+    bottom: 47px;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.footer01 .footerArticleButton .countryList::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg);
+    bottom: -13px;
+    right: 150px;
+}
+
+.footer01 .footerArticleButton .countryList button {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    color: #777;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer01 .footerArticleButton .countryList button > img {
+    width: 24px;
+    height: 20px;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.footer01 .footerArticleButton .countryList button > span {
+    line-height: 16px;
+}
+
+.footer01 .footerArticleButton .countryList button:hover {
+    background-color: #eee;
+}
+
+.footer01 .footer01LargeList {
+    display: flex;
+    margin-bottom: 50px;
 }
 
 .footer01 .footer01LargeList {
@@ -597,7 +848,7 @@ body {
 
 .footer01 .footer01LargeList .footer01LargeListItem {
     flex-basis: 100px;
-    flex-grow: 1;;
+    flex-grow: 1;
 }
 
 .footer01 .footer01LargeList .footer01LargeListItem .footer01ListItemHeader {
@@ -632,6 +883,24 @@ body {
     margin-right: 5px;
 }
 
+.footer01 .socialNetwork .socialNetworkList .socialLink {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer01 .socialNetwork .socialNetworkList .socialLink > i {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px black;
+}
+
 .footer01 .footer01AppLink a {
     display: inline-block;
     width: 137px;
@@ -654,5 +923,4 @@ body {
     line-height: 17px;
     color: #777;
     border-top: 1px solid #eee;
-
 }
