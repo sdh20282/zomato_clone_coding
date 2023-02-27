@@ -287,12 +287,30 @@ const initCountry = () => {
     })
 }
 
+const initPopular = () => {
+    const section = document.querySelector('.section03');
+    const buttons = section.querySelectorAll('ul > li > button');
+    const lists = section.querySelectorAll('ul > li > ul');
+
+    buttons.forEach((e, index) => {
+        e.addEventListener('click', e => {
+            if (index < 2) {
+                lists[index].classList.toggle('show');
+            } else {
+                lists[index].classList.toggle('showGrid');
+            }
+            e.currentTarget.classList.toggle('selected');
+        });
+    });
+}
+
 const init = () => {
     initHeaderBoxLocationButton();
     initSection02ListButton();
     initArticle01Form();
     initLanguage();
     initCountry();
+    initPopular();
 }
 
 window.onload = () => {
