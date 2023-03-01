@@ -1,12 +1,46 @@
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes appearArticle {
+    0% {
+        scale: 1.1;
+    }
+
+    10% {
+        scale: 1.15;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
 @font-face {
     font-family: 'helvetica';
-    /* src: url('../../assets/fonts/HelveticaNeueLTStd-ThEx.otf') format('truetype'); */
     src: url('../../assets/fonts_test/Helvetica Extended Heavy.ttf') format('truetype');
 }
 
 body {
     font-family: 'helvetica';
     background-color: #f8f8f8;
+    overflow-x: hidden;
 }
 
 .irOnly {
@@ -39,6 +73,43 @@ body {
 
 .buttonSelected {
     background-color: rgb(237, 244, 255);
+}
+
+
+.articleForm .articleFormFieldset {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    vertical-align: top;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.articleForm .articleFormFieldset > p {
+    display: none;
+    position: absolute;
+    color: rgb(224, 53, 70);
+    font-size: 11px;
+    bottom: -15px;
+}
+
+.articleForm .articleFormFieldset > label {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ccc;
+    background-color: white;
+    top: 16px;
+    left: 5px;
+    padding: 0 7px;
+}
+
+.articleForm .articleFormFieldset > input {
+    padding: 8px 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
 }
 
 .pageHeader {
@@ -180,6 +251,143 @@ body {
     flex-grow: 1;
 }
 
+.pageHeader .articleWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: rgb(155, 155, 155);
+    animation: appearArticle 0.3s;
+}
+
+.pageHeader .articleWrapper .articleSignup {
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+    text-align: left;
+}
+
+.pageHeader .articleWrapper .articleSignup > div {
+    color: rgb(79, 79, 79);
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.pageHeader .articleWrapper .articleSignup > div > h2 {
+    font-size: 30px;
+}
+
+.pageHeader .articleWrapper .articleSignup > div > button {
+    font-size: 16px;
+}
+
+.pageHeader .articleForm .articleFormFieldset {
+    margin-bottom: 25px;
+}
+
+.pageHeader .articleForm .termField {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+}
+
+.pageHeader .articleForm .termField input {
+    width: 18px;
+    height: 18px;
+    margin: 0 8px 0 4px;
+}
+
+.pageHeader .articleForm .termField p {
+    display: inline;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.pageHeader .articleForm .termField p > a {
+    color: crimson;
+}
+
+.pageHeader .articleForm .buttonCreateAccount {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background-color: rgb(206, 206, 206);
+    border-radius: 7px;
+}
+
+.pageHeader .articleWrapper .articleSignup .divide {
+    margin: 9px 0;
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.pageHeader .articleWrapper .articleSignup .divide::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: calc(50% - 15px);
+    left: 0;
+    top: 15px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.pageHeader .articleWrapper .articleSignup .divide::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: calc(50% - 15px);
+    right: 0;
+    top: 15px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.pageHeader .articleWrapper .articleSignup .googleLink {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    color: rgb(125, 125, 125);
+    line-height: 24px;
+    padding: 12px;
+}
+
+.pageHeader .articleWrapper .articleSignup .googleLink > img {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+
+.pageHeader .articleWrapper .articleSignup .already {
+    display: inline;
+    font-size: 18px;
+    line-height: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.pageHeader .articleWrapper .articleSignup .loginButton {
+    display: inline;
+    font-size: 18px;
+    line-height: 10px;
+    color: rgb(239, 79, 95);
+    margin-left: 5px;
+}
+
 .main01 {
     background-color: white;
 }
@@ -205,7 +413,6 @@ body {
     width: 100%;
     height: 240px;
     border-radius: 10px;
-    overflow: hidden;
     border: 1px solid #eee;
 }
 
@@ -222,6 +429,7 @@ body {
     width: 100%;
     height: calc(100% - 82px);
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .list01 .list01Box>div {
@@ -291,13 +499,13 @@ body {
     position: relative;
     height: 320px;
     border-radius: 5px;
-    overflow: hidden;
 }
 
 .section01 .section01List .section01ListItem .section01ListItemBox>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .section01 .section01List .section01ListItem .section01ListItemBox .section01TextWrap {
@@ -439,16 +647,16 @@ body {
     color: #777;
 }
 
-.article01 .article01Right .article01Form {
+.article01 .article01Right .articleForm {
     margin-bottom: 24px;
 }
 
-.article01 .article01Right .article01Form .article01FormRadio {
+.article01 .article01Right .articleForm .article01FormRadio {
     display: flex;
     margin-bottom: 22px;
 }
 
-.article01 .article01Right .article01Form .article01FormRadio input[type="radio"] {
+.article01 .article01Right .articleForm .article01FormRadio input[type="radio"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,15 +671,15 @@ body {
     cursor: pointer;
 }
 
-.article01 .article01Right .article01Form .article01FormRadio input[type="radio"]:hover {
+.article01 .article01Right .articleForm .article01FormRadio input[type="radio"]:hover {
     border: 1px solid rgb(239, 79, 95);
 }
 
-.article01 .article01Right .article01Form .article01FormRadio input:nth-child(3) {
+.article01 .article01Right .articleForm .article01FormRadio input:nth-child(3) {
     margin-left: 50px;
 }
 
-.article01 .article01Right .article01Form .article01FormRadio input[type="radio"]::before {
+.article01 .article01Right .articleForm .article01FormRadio input[type="radio"]::before {
     content: "";
     display: block;
     width: 9px;
@@ -481,20 +689,20 @@ body {
     box-shadow: inset 1em 1em rgb(239, 79, 95);
 }
 
-.article01 .article01Right .article01Form .article01FormRadio > input[type="radio"]:checked {
+.article01 .article01Right .articleForm .article01FormRadio > input[type="radio"]:checked {
     border: 2px solid rgb(239, 79, 95);
 }
 
-.article01 .article01Right .article01Form .article01FormRadio > input[type="radio"]:checked::before {
+.article01 .article01Right .articleForm .article01FormRadio > input[type="radio"]:checked::before {
     transform: scale(1);
 }
 
-.article01 .article01Right .article01Form .article01FormRadio label {
+.article01 .article01Right .articleForm .article01FormRadio label {
     padding-left: 10px;
     cursor: pointer;
 }
 
-.article01 .article01Right .article01Form .article01FormField {
+.article01 .article01Right .articleForm .article01FormField {
     display: none;
     width: 292px;
     height: 48px;
@@ -504,47 +712,17 @@ body {
     border-radius: 7px;
 }
 
-.article01 .article01Right .article01Form .article01FormField.selected {
+.article01 .article01Right .articleForm .article01FormField.selected {
     display: inline-block;
 }
 
-.article01 .article01Right .article01Form .article01FormEmail {
-    position: relative;
-}
-
-.article01 .article01Right .article01Form .article01FormEmail > p {
-    display: none;
-    position: absolute;
-    color: rgb(224, 53, 70);
-    font-size: 11px;
-    bottom: -15px;
-}
-
-.article01 .article01Right .article01Form .article01FormEmail > label {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 300;
-    color: #ccc;
-    background-color: white;
-    top: 16px;
-    left: 5px;
-    padding: 0 7px;
-}
-
-.article01 .article01Right .article01Form .article01FormEmail > input {
-    padding: 8px 12px;
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-}
-
-.article01 .article01Right .article01Form .article01FormPhone {
+.article01 .article01Right .articleForm .article01FormPhone {
     position: relative;
     padding: 10px 7px;
     
 }
 
-.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneButton {
+.article01 .article01Right .articleForm .article01FormPhone .article01FormPhoneButton {
     width: 70px;
     height: 100%;
     margin-right: 5px;
@@ -553,11 +731,11 @@ body {
     font-size: 15px;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneButton>i {
+.article01 .article01Right .articleForm .article01FormPhone .article01FormPhoneButton>i {
     font-size: 11px;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList {
+.article01 .article01Right .articleForm .article01FormPhone .article01FormPhoneList {
     display: none;
     position: absolute;
     width: 80px;
@@ -571,25 +749,25 @@ body {
     z-index: 10;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList button {
+.article01 .article01Right .articleForm .article01FormPhone .article01FormPhoneList button {
     width: 100%;
     height: 30px;
     color: #777;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone .article01FormPhoneList button:hover {
+.article01 .article01Right .articleForm .article01FormPhone .article01FormPhoneList button:hover {
     background-color: #ccc;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone >input {
+.article01 .article01Right .articleForm .article01FormPhone >input {
     height: 100%;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone >input::placeholder {
+.article01 .article01Right .articleForm .article01FormPhone >input::placeholder {
     color: #ccc;
 }
 
-.article01 .article01Right .article01Form .article01FormPhone > p {
+.article01 .article01Right .articleForm .article01FormPhone > p {
     display: none;
     position: absolute;
     color: rgb(224, 53, 70);
@@ -599,7 +777,7 @@ body {
 }
 
 .labelMove {
-    transform: scale(0.6) translate(-15px, -40px);
+    transform: scale(0.6) translate(-20px, -40px);
     transition: transform 0.2s;
 }
 
@@ -608,11 +786,11 @@ body {
     transition: transform 0.2s;
 }
 
-.article01 .article01Right .article01Form > button {
+.article01 .article01Right .articleForm > button {
     width: 148px;
     height: 48px;
     vertical-align: top;
-    margin-left: 5px;
+    margin-left: 3px;
     background-color: rgb(239, 79, 95);
     border-radius: 7px;
     font-size: 16px;

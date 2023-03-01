@@ -55,6 +55,59 @@
                 <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
             </form>
         </div>
+        <div class="articleWrapper loginWrapper">
+            <article class="articleLogin">
+                <div>
+                    <h2>Log in</h2>
+                    <button class="closeButton">
+                        <span class="irOnly">close</span>
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+        <div class="articleWrapper signupWrapper">
+            <article class="articleSignup">
+                <div>
+                    <h2>Sign up</h2>
+                    <button class="closeButton">
+                        <span class="irOnly">close</span>
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+                <form class="articleForm" action="/">
+                    <fieldset class="articleFormFieldset nameField">
+                        <legend class="irOnly">enter name</legend>
+                        <label class="signupName" for="signupName">Full Name</label>
+                        <input id="signupName" type="text" pattern="[a-zA-Z]">
+                        <p>Please enter a valid name</p>
+                        <!-- <button>
+                            <span class="irOnly">erase</span>
+                            <i class="fa-solid fa-x"></i>
+                        </button> -->
+                    </fieldset>
+                    <fieldset class="articleFormFieldset emailField">
+                        <legend class="irOnly">enter email</legend>
+                        <label class="signupEmail" for="signupEmail">Email</label>
+                        <input id="signupEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <p>Invalid Email id</p>
+                    </fieldset>
+                    <fieldset class="termField">
+                        <label class="irOnly" for="termInput">약관 동의 여부</label>
+                        <input id="termInput" type="checkbox">
+                        <p>I agree to Zomato's <a href="/">Terms of Service</a>, <a href="/">Privacy Policy</a> and <a href="/">Content Policies</a></p>
+                    </fieldset>
+                    <button class="buttonCreateAccount">Create account</button>
+                </form>
+                <p class="divide">or</p>
+                <a class="googleLink" href="/">
+                    <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="">
+                    Continue with Google
+                </a>
+                <p class="already">Already have an account?</p>
+                <button class="loginButton">Log in</button>
+            </article>
+        </div>
     </header>
     <main class="main01">
         <section>
@@ -349,14 +402,14 @@
                         <h3>Get the Zomato app</h3>
                         <p>We will send you a link, open it on your phone to download the app</p>
                     </header>
-                    <form class="article01Form" action="/">
+                    <form class="articleForm" action="/">
                         <fieldset class="article01FormRadio">
                             <input type="radio" name="way" id="forEmail" checked>
                             <label for="forEmail">Email</label>
                             <input type="radio" name="way" id="forPhone">
                             <label for="forPhone">Phone</label>
                         </fieldset>
-                        <fieldset class="article01FormField article01FormEmail selected">
+                        <fieldset class="article01FormField articleFormFieldset article01FormEmail selected">
                             <legend class="irOnly">using email</legend>
                             <label class="emalLabel" for="emailLabel">Email</label>
                             <input type="email" id="emailLabel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
@@ -1111,7 +1164,7 @@
                         </ul>
                     </nav>
                 </article>
-                <article class="footer01AppLink">
+                <article class="applink footer01AppLink">
                     <h3 class="irOnly">Download app from</h3>
                     <a href="/">
                         <span class="irOnly">google playstore</span>
