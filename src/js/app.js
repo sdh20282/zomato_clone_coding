@@ -501,13 +501,53 @@ const initSignupArticle = () => {
     });
 }
 
+const initLoginArticle = () => {
+    const wrapper = document.querySelector('.pageHeader .loginWrapper');
+    const article = wrapper.querySelector('.articleLogin');
+    const form = article.querySelector('article > form');
+
+    const phoneSelect = form.querySelector('.selectPhone');
+
+    wrapper.addEventListener('click', () => {
+        wrapper.style.display = 'none';
+        window.onscroll = () => {}
+    });
+
+    article.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    article.querySelector('.closeButton').addEventListener('click', () => {
+        wrapper.style.display = 'none';
+        window.onscroll = () => {}
+    });
+
+    form.querySelector('.buttonSendOneTimePassword').addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+
+    phoneSelect.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+
 const initNavBar = () => {
     const header = document.querySelector('.pageHeader');
     const signupButton = header.querySelectorAll('.pageHeader > .headerNav > .headerNavList > li')[3].querySelector('button');
     const signupField = header.querySelector('.signupWrapper');
 
+    const loginButton = header.querySelectorAll('.pageHeader > .headerNav > .headerNavList > li')[2].querySelector('button');
+    const loginField = header.querySelector('.loginWrapper');
+
     signupButton.addEventListener('click', () => {
         signupField.style.display = 'block';
+        window.onscroll = () => {
+            window.scrollTo(0, 0);
+        }
+    });
+
+    loginButton.addEventListener('click', () => {
+        loginField.style.display = 'block';
         window.onscroll = () => {
             window.scrollTo(0, 0);
         }
@@ -523,6 +563,7 @@ const init = () => {
     initPopular();
     initAppear();
     initSignupArticle();
+    initLoginArticle();
     initNavBar();
 }
 
