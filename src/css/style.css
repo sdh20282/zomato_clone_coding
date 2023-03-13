@@ -725,6 +725,7 @@ body {
 .section02 .section02List .section02ListItemBox.sectionListButton {
     font-size: 18px;
     font-weight: 700;
+    display: none;
 }
 
 .section02 .section02List .section02ListItemBox.sectionListButton::after {

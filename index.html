@@ -39,9 +39,9 @@
             <div class="headerBoxLocation">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
                 <p>Connaught Place Ywca, 1, Ashoka Rd, Hanu</p>
-                <button class="headerBoxLocationButton arrowRotate0">
+                <button class="headerBoxLocationButton">
                     <span class="irOnly">위치 설정</span>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-down arrowRotate0"></i>
                 </button>
                 <button class="headerBoxLocationSetButton">
                     <i class="fa-solid fa-location-crosshairs"></i>
@@ -76,8 +76,8 @@
                             <li>
                                 <button>
                                     <img src="/assets/images/india.webp" alt="">
-                                    <span class="country">India</span>
-                                    <span class="number">+91</span>
+                                    <span class="country">test</span>
+                                    <span class="number">+23</span>
                                 </button>
                             </li>
                             <li>
@@ -174,7 +174,7 @@
                     <fieldset class="articleFormFieldset nameField">
                         <legend class="irOnly">enter name</legend>
                         <label class="signupName" for="signupName">Full Name</label>
-                        <input id="signupName" type="text" pattern="[a-zA-Z]">
+                        <input id="signupName" type="text" pattern="[a-zA-Z]{1,30}$">
                         <p>Please enter a valid name</p>
                         <!-- <button>
                             <span class="irOnly">erase</span>
@@ -351,7 +351,7 @@
                         </a>
                     </li>
                     <li class="section02ListItem">
-                        <button class="section02ListItemBox sectionListButton">
+                        <button class="section02ListItemBox sectionListButton show">
                             <span>see more</span>
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>

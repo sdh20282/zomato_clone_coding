@@ -1,11 +1,30 @@
+const showDropDownMenu = (button, list) => {
+    const rotate = button.querySelector('button > i');
+
+    rotate.classList.toggle('arrowRotate0');
+    rotate.classList.toggle('arrowRotate180');
+    list.classList.toggle('show');
+}
+
+const inputInvalid = (form, label) => {
+    form.style.border = '1px solid crimson';
+    label.style.color = 'crimson';
+}
+
+const inputValid = (form, label) => {
+    form.style.border = '1px solid lightseagreen';
+    label.style.color = 'lightseagreen';
+}
+
+
 const initHeaderBoxLocationButton = () => {
-    const button = document.querySelector('.headerBoxLocationButton');
-    const buttonSet = document.querySelector('.headerBoxLocationSetButton');
+    const header = document.querySelector('.pageHeader');
+    const container = header.querySelector('.headerBox');
+    const button = container.querySelector('.headerBoxLocationButton');
+    const buttonSet = container.querySelector('.headerBoxLocationSetButton');
 
     button.addEventListener('click', () => {
-        button.classList.toggle('arrowRotate0');
-        button.classList.toggle('arrowRotate180');
-        buttonSet.classList.toggle('show');
+        showDropDownMenu(button, buttonSet);
     });
 }
 
@@ -16,12 +35,12 @@ const initSection02ListButton = () => {
 
     buttons[0].addEventListener('click', () => {
         li.style.display = 'none';
-        folds.forEach(e => e.style.display = 'block');
+        folds.forEach(e => e.classList.toggle('show'));
     });
 
     buttons[1].addEventListener('click', () => {
         li.style.display = 'block';
-        folds.forEach(e => e.style.display = 'none');
+        folds.forEach(e => e.classList.toggle('show'));
     });
 }
 
@@ -47,14 +66,11 @@ const initArticle01Form = () => {
     const phoneFirstList = phoneForm.querySelector('.article01FormPhoneList');
     const phoneFirstButtons = phoneFirstList.querySelectorAll('.article01FormPhoneList button');
 
-    const arrow = phoneFirstButton.querySelector('button > i');
-
     phoneForm.addEventListener('click', (e) => {
         e.preventDefault();
     });
 
     // radio
-
     emailradio.addEventListener('click', () => {
         checkPhone = false;
         emailForm.classList.add('selected');
@@ -76,22 +92,18 @@ const initArticle01Form = () => {
     });
 
     // email
-
     emailInput.addEventListener('input', () => {
         if (!emailInput.value) {
-            emailForm.style.border = '1px solid crimson';
-            emailLabel.style.color = 'crimson';
+            inputInvalid(emailForm, emailLabel);
             checklabel.style.display = 'block';
             return;
         }
 
         if (emailInput.validity.patternMismatch) {
-            emailForm.style.border = '1px solid crimson';
-            emailLabel.style.color = 'crimson';
+            inputInvalid(emailForm, emailLabel);
             checklabel.style.display = 'block';
         } else {
-            emailForm.style.border = '1px solid lightseagreen';
-            emailLabel.style.color = 'lightseagreen';
+            inputValid(emailForm, emailLabel);
             checklabel.style.display = 'none';
         }
     });
@@ -112,8 +124,7 @@ const initArticle01Form = () => {
         }
 
         if (emailInput.value && !emailInput.validity.patternMismatch) {
-            emailForm.style.border = '1px solid lightseagreen';
-            emailLabel.style.color = 'lightseagreen';
+            inputValid(emailForm, emailLabel);
         }
     });
 
@@ -137,17 +148,19 @@ const initArticle01Form = () => {
     });
 
     // phone
+    const phoneInvalid = () => {
+        phoneForm.style.border = '1px solid crimson';
+        phoneLabel.style.display = 'block';
+    }
 
     phoneInput.addEventListener('input', () => {
         if (!phoneInput.value) {
-            phoneForm.style.border = '1px solid crimson';
-            phoneLabel.style.display = 'block';
+            phoneInvalid();
             return;
         }
 
         if (phoneInput.validity.patternMismatch) {
-            phoneForm.style.border = '1px solid crimson';
-            phoneLabel.style.display = 'block';
+            phoneInvalid();
         } else {
             phoneForm.style.border = '1px solid lightseagreen';
             phoneLabel.style.display = 'none';
@@ -167,8 +180,7 @@ const initArticle01Form = () => {
 
     phoneInput.addEventListener('focusout', () => {
         if (!phoneInput.value) {
-            phoneForm.style.border = '1px solid crimson';
-            phoneLabel.style.display = 'block';
+            phoneInvalid();
         }
 
         if (phoneInput.value && !phoneInput.validity.patternMismatch) {
@@ -177,7 +189,6 @@ const initArticle01Form = () => {
     });
 
     // share
-
     shareButton.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -206,18 +217,13 @@ const initArticle01Form = () => {
     // phoneFirst
 
     phoneFirstButton.addEventListener('click', () => {
-        arrow.classList.toggle('arrowRotate0');
-        arrow.classList.toggle('arrowRotate180');
-        phoneFirstList.classList.toggle('show');
-
+        showDropDownMenu(phoneFirstButton, phoneFirstList);
     });
 
     phoneFirstButtons.forEach(el => {
         el.addEventListener('click', () => {
             phoneFirstButton.querySelector('button span').textContent = el.textContent;
-            arrow.classList.remove('arrowRotate180');
-            arrow.classList.add('arrowRotate0');
-            phoneFirstList.classList.remove('show');
+            showDropDownMenu(phoneFirstButton, phoneFirstList);
         });
     });
 }
@@ -310,8 +316,6 @@ const initAppear = () => {
     const images2 = document.querySelectorAll('.list01Box > img');
 
     document.addEventListener('scroll', () => {
-        // console.log(document.querySelector('.pageHeader > h1').getBoundingClientRect());
-    
         links.forEach(e => {
             const now = e.getBoundingClientRect();
 
@@ -366,7 +370,7 @@ const initSignupArticle = () => {
 
     wrapper.addEventListener('click', () => {
         wrapper.style.display = 'none';
-        window.onscroll = () => {}
+        window.onscroll = () => { }
     });
 
     article.addEventListener('click', (e) => {
@@ -375,24 +379,21 @@ const initSignupArticle = () => {
 
     article.querySelector('.closeButton').addEventListener('click', () => {
         wrapper.style.display = 'none';
-        window.onscroll = () => {}
+        window.onscroll = () => { }
     });
 
     emailInput.addEventListener('input', () => {
         if (!emailInput.value) {
-            emailForm.style.border = '1px solid crimson';
-            emailLabel.style.color = 'crimson';
+            inputInvalid(emailForm, emailLabel);
             emailCheck.style.display = 'block';
             return;
         }
 
         if (emailInput.validity.patternMismatch) {
-            emailForm.style.border = '1px solid crimson';
-            emailLabel.style.color = 'crimson';
+            inputInvalid(emailForm, emailLabel);
             emailCheck.style.display = 'block';
         } else {
-            emailForm.style.border = '1px solid lightseagreen';
-            emailLabel.style.color = 'lightseagreen';
+            inputValid(emailForm, emailLabel);
             emailCheck.style.display = 'none';
         }
     });
@@ -408,13 +409,11 @@ const initSignupArticle = () => {
 
         if (!checkEmail) {
             checkEmail = true;
-            emailForm.style.border = '1px solid lightseagreen';
-            emailLabel.style.color = 'lightseagreen';
+            inputValid(emailForm, emailLabel);
         }
 
         if (emailInput.value && !emailInput.validity.patternMismatch) {
-            emailForm.style.border = '1px solid lightseagreen';
-            emailLabel.style.color = 'lightseagreen';
+            inputValid(emailForm, emailLabel);
         }
     });
 
@@ -439,19 +438,16 @@ const initSignupArticle = () => {
 
     nameInput.addEventListener('input', () => {
         if (!nameInput.value) {
-            nameForm.style.border = '1px solid crimson';
-            nameLabel.style.color = 'crimson';
+            inputInvalid(nameForm, nameLabel);
             nameCheck.style.display = 'block';
             return;
         }
 
         if (nameInput.validity.patternMismatch) {
-            nameForm.style.border = '1px solid crimson';
-            nameLabel.style.color = 'crimson';
+            inputInvalid(nameForm, nameLabel);
             nameCheck.style.display = 'block';
         } else {
-            nameForm.style.border = '1px solid lightseagreen';
-            nameLabel.style.color = 'lightseagreen';
+            inputValid(nameForm, nameLabel);
             nameCheck.style.display = 'none';
         }
     });
@@ -467,13 +463,11 @@ const initSignupArticle = () => {
 
         if (!checkName) {
             checkName = true;
-            nameForm.style.border = '1px solid lightseagreen';
-            nameLabel.style.color = 'lightseagreen';
+            inputValid(nameForm, nameLabel);
         }
 
         if (nameInput.value && !nameInput.validity.patternMismatch) {
-            nameForm.style.border = '1px solid lightseagreen';
-            nameLabel.style.color = 'lightseagreen';
+            inputValid(nameForm, nameLabel);
         }
     });
 
@@ -505,12 +499,16 @@ const initLoginArticle = () => {
     const wrapper = document.querySelector('.pageHeader .loginWrapper');
     const article = wrapper.querySelector('.articleLogin');
     const form = article.querySelector('article > form');
+    const loginField = form.querySelector('.loginFieldSetPhone');
 
-    const phoneSelect = form.querySelector('.selectPhone');
+    const phoneSelect = loginField.querySelector('.selectPhone');
+    const phoneList = loginField.querySelector('.countryList');
+
+    const phoneInput = loginField.querySelector('#articleLoginPhone');
 
     wrapper.addEventListener('click', () => {
         wrapper.style.display = 'none';
-        window.onscroll = () => {}
+        window.onscroll = () => { }
     });
 
     article.addEventListener('click', (e) => {
@@ -519,7 +517,7 @@ const initLoginArticle = () => {
 
     article.querySelector('.closeButton').addEventListener('click', () => {
         wrapper.style.display = 'none';
-        window.onscroll = () => {}
+        window.onscroll = () => { }
     });
 
     form.querySelector('.buttonSendOneTimePassword').addEventListener('click', (e) => {
@@ -528,6 +526,25 @@ const initLoginArticle = () => {
 
     phoneSelect.addEventListener('click', (e) => {
         e.preventDefault();
+        showDropDownMenu(phoneSelect, phoneList);
+    });
+
+    phoneList.querySelectorAll('button').forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            showDropDownMenu(phoneSelect, phoneList);
+
+            phoneSelect.querySelector('img').setAttribute('src', element.querySelector('img').src);
+            phoneSelect.querySelector('span').textContent = element.querySelectorAll('span')[1].textContent;
+        });
+    });
+
+    phoneInput.addEventListener('focus', (e) => {
+        loginField.style.border = '1px solid lightseagreen';
+    });
+
+    phoneInput.addEventListener('focusout', (e) => {
+        loginField.style.border = '1px solid #ccc';
     });
 }
 
