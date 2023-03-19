@@ -99,6 +99,8 @@ const initArticle01Form = () => {
             return;
         }
 
+        console.log(emailInput.validity);
+
         if (emailInput.validity.patternMismatch) {
             inputInvalid(emailForm, emailLabel);
             checklabel.style.display = 'block';
@@ -321,7 +323,7 @@ const initAppear = () => {
 
             if (now.y - window.innerHeight < 0 && now.bottom > 0) {
                 if (window.getComputedStyle(e).animation.startsWith('none')) {
-                    e.style.animation = 'appear 0.5s';
+                    e.style.animation = 'appear 10s';
                 }
             }
         });
@@ -331,7 +333,7 @@ const initAppear = () => {
 
             if (now.y - window.innerHeight < 0 && now.bottom > 0) {
                 if (window.getComputedStyle(e).animation.startsWith('none')) {
-                    e.style.animation = 'appear 0.5s';
+                    e.style.animation = 'appear 10s';
                 }
             }
         });
