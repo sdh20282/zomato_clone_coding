@@ -22,9 +22,25 @@ const initHeaderBoxLocationButton = () => {
     const container = header.querySelector('.headerBox');
     const button = container.querySelector('.headerBoxLocationButton');
     const buttonSet = container.querySelector('.headerBoxLocationSetButton');
+    const input = container.querySelector('#locationInput');
+    const rotate = button.querySelector('button > i');
 
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+
         showDropDownMenu(button, buttonSet);
+    });
+
+    input.addEventListener('focus', (e) => {
+        rotate.classList.remove('arrowRotate0');
+        rotate.classList.add('arrowRotate180');
+        buttonSet.classList.add('show');
+    });
+
+    input.addEventListener('focusout', () => {
+        rotate.classList.add('arrowRotate0');
+        rotate.classList.remove('arrowRotate180');
+        buttonSet.classList.remove('show');
     });
 }
 

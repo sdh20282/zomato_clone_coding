@@ -6,69 +6,187 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery restaurants inSector 29</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/restaurants.css">
 </head>
 
 <body>
-    <header>
-        <h1>
-            <span>zomato</span>
-        </h1>
-        <form action="/">
-            <fieldset>
-                <legend>location</legend>
-                <img src="" alt="">
-                <label for="location">location</label>
-                <input type="text" id="location">
-                <button>
-                    <img src="" alt="">
-                    <span>drop down</span>
-                </button>
-            </fieldset>
-            <fieldset>
-                <legend>search</legend>
-                <img src="" alt="">
-                <label for="search">search</label>
-                <input type="text" id="search">
-            </fieldset>
-        </form>
-        <ul>
-            <li>
-                <button>log in</button>
-            </li>
-            <li>
-                <button>log out</button>
-            </li>
-        </ul>
-        <nav>
-            <ul>
+    <header class="pageHeader">
+        <nav class="headerNav">
+            <ul class="headerNavList">
                 <li>
-                    <a href="">Home</a>
+                    <button class="headerNavItem">Log in</button>
                 </li>
                 <li>
-                    <a href="">India</a>
-                </li>
-                <li>
-                    <a href="">Deihi NCR</a>
-                </li>
-                <li>
-                    <a href="">Gurgoan (Gurugram)</a>
-                </li>
-                <li>
-                    <p>Sector 29 Restaurants</p>
+                    <button class="headerNavItem">Sign up</button>
                 </li>
             </ul>
         </nav>
-        <ul>
-            <li>
-                <button>Delivery</button>
-            </li>
-            <li>
-                <button>Dining Out</button>
-            </li>
-            <li>
-                <button>Nightlife</button>
-            </li>
-        </ul>
+        <h1>zomato</h1>
+        <div class="headerBox">
+            <div class="headerBoxLocation">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <p>Connaught Place Ywca, 1, Ashoka Rd, Hanu</p>
+                <button class="headerBoxLocationButton">
+                    <span class="irOnly">위치 설정</span>
+                    <i class="fa-solid fa-caret-down arrowRotate0"></i>
+                </button>
+                <button class="headerBoxLocationSetButton">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <span>Detec current location</span>
+                    <span>Using GPS</span>
+                </button>
+            </div>
+            <form class="headerBoxForm" action="/">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <label class="irOnly" for="search">search</label>
+                <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
+            </form>
+        </div>
+        <div class="articleWrapper loginWrapper">
+            <article class="articleContent articleLogin">
+                <div>
+                    <h2>Log in</h2>
+                    <button class="closeButton">
+                        <span class="irOnly">close</span>
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+                <form action="/" class="">
+                    <fieldset class="loginFieldSetPhone">
+                        <legend class="irOnly">input phone number</legend>
+                        <button class="selectPhone">
+                            <img src="/assets/images/india.webp" alt="">
+                            <span>+91</span>
+                            <i class="fa-solid fa-chevron-down arrowRotate0"></i>
+                        </button>
+                        <ul class="countryList">
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">test</span>
+                                    <span class="number">+23</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="/assets/images/india.webp" alt="">
+                                    <span class="country">India</span>
+                                    <span class="number">+91</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <label class="irOnly" for="articleLoginPhone">Enter Phone Number</label>
+                        <input type="text" id="articleLoginPhone" placeholder="Phone">
+                    </fieldset>
+                    <button class="buttonSendOneTimePassword">Send One Time Password</button>
+                </form>
+                <span class="divide">or</span>
+                <button class="continueEmail">
+                    <i class="fa-solid fa-envelope"></i>
+                    Continue with Email
+                </button>
+                <button class="continueGoogle">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                </button>
+                <p class="createAccount">New to Zomato? <a href="/">Create account</a></p>
+            </article>
+        </div>
+        <div class="articleWrapper signupWrapper">
+            <article class="articleContent articleSignup">
+                <div>
+                    <h2>Sign up</h2>
+                    <button class="closeButton">
+                        <span class="irOnly">close</span>
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+                <form class="articleForm" action="/">
+                    <fieldset class="articleFormFieldset nameField">
+                        <legend class="irOnly">enter name</legend>
+                        <label class="signupName" for="signupName">Full Name</label>
+                        <input id="signupName" type="text" pattern="[a-zA-Z]{1,30}$">
+                        <p>Please enter a valid name</p>
+                    </fieldset>
+                    <fieldset class="articleFormFieldset emailField">
+                        <legend class="irOnly">enter email</legend>
+                        <label class="signupEmail" for="signupEmail">Email</label>
+                        <input id="signupEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <p>Invalid Email id</p>
+                    </fieldset>
+                    <fieldset class="termField">
+                        <label class="irOnly" for="termInput">약관 동의 여부</label>
+                        <input id="termInput" type="checkbox">
+                        <p>I agree to Zomato's <a href="/">Terms of Service</a>, <a href="/">Privacy Policy</a> and <a href="/">Content Policies</a></p>
+                    </fieldset>
+                    <button class="buttonCreateAccount">Create account</button>
+                </form>
+                <span class="divide">or</span>
+                <a class="googleLink" href="/">
+                    <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="">
+                    Continue with Google
+                </a>
+                <p class="already">Already have an account?</p>
+                <button class="loginButton">Log in</button>
+            </article>
+        </div>
     </header>
     <main>
         <section class="container section01">

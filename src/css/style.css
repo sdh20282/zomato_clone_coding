@@ -186,13 +186,8 @@ body {
     margin-right: 7px;
 }
 
-.pageHeader .headerBox .headerBoxLocation>p {
-    width: 172px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #777;
-    font-size: 14px;
-    margin-right: 15px;
+.pageHeader .headerBox .headerBoxLocation>input {
+    padding: 0 15px 0 5px;
 }
 
 .pageHeader .headerBox .headerBoxLocation .headerBoxLocationButton {

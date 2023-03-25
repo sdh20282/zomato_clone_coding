@@ -35,10 +35,12 @@
         </nav>
         <h1>zomato</h1>
         <p>Discover the best food & drinks in Delhi NCR</p>
-        <div class="headerBox">
-            <div class="headerBoxLocation">
+        <form class="headerBox" action="/">
+            <fieldset class="headerBoxLocation">
+                <legend class="irOnly">위치 입력 영역</legend>
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
-                <p>Connaught Place Ywca, 1, Ashoka Rd, Hanu</p>
+                <label for="locationInput" class="irOnly">위치 입력</label>
+                <input type="text" id="locationInput" placeholder="Connaught Place Ywca, 1, Ashoka Rd, Hanu"></input>
                 <button class="headerBoxLocationButton">
                     <span class="irOnly">위치 설정</span>
                     <i class="fa-solid fa-caret-down arrowRotate0"></i>
@@ -48,13 +50,14 @@
                     <span>Detec current location</span>
                     <span>Using GPS</span>
                 </button>
-            </div>
-            <form class="headerBoxForm" action="/">
+            </fieldset>
+            <fieldset class="headerBoxForm">
+                <legend class="irOnly">검색 영역</legend>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <label class="irOnly" for="search">search</label>
                 <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
-            </form>
-        </div>
+            </fieldset>
+        </form>
         <div class="articleWrapper loginWrapper">
             <article class="articleContent articleLogin">
                 <div>
