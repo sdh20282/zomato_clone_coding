@@ -8,42 +8,66 @@
     <title>Delivery restaurants inSector 29</title>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/restaurants.css">
+    <script src="https://kit.fontawesome.com/de5e0f7e30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="pageHeader">
-        <nav class="headerNav">
-            <ul class="headerNavList">
+    <header class="pageHeader container">
+        <div class="upperWrapper">
+            <h1>zomato</h1>
+            <form class="headerBox" action="/">
+                <fieldset class="headerBoxLocation">
+                    <legend class="irOnly">위치 입력 영역</legend>
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <label for="locationInput" class="irOnly">위치 입력</label>
+                    <input type="text" id="locationInput"
+                        placeholder="Connaught Place Ywca, 1, Ashoka Rd, Hanu"></input>
+                    <button class="headerBoxLocationButton">
+                        <span class="irOnly">위치 설정</span>
+                        <i class="fa-solid fa-caret-down arrowRotate0"></i>
+                    </button>
+                    <button class="headerBoxLocationSetButton">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <span>Detec current location</span>
+                        <span>Using GPS</span>
+                    </button>
+                </fieldset>
+                <fieldset class="headerBoxForm">
+                    <legend class="irOnly">검색 영역</legend>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <label class="irOnly" for="search">search</label>
+                    <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
+                </fieldset>
+            </form>
+            <ul class="headerModals">
                 <li>
-                    <button class="headerNavItem">Log in</button>
+                    <button class="headerModalItem">Log in</button>
                 </li>
                 <li>
-                    <button class="headerNavItem">Sign up</button>
+                    <button class="headerModalItem">Sign up</button>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="headerPathes">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/">India</a>
+                </li>
+                <li>
+                    <a href="/">Delih NCR</a>
+                </li>
+                <li>
+                    <a href="/">Gurgaon (Gurugram)</a>
+                </li>
+                <li>
+                    <p>Sector 29 Restaurants</p>
                 </li>
             </ul>
         </nav>
-        <h1>zomato</h1>
-        <div class="headerBox">
-            <div class="headerBoxLocation">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                <p>Connaught Place Ywca, 1, Ashoka Rd, Hanu</p>
-                <button class="headerBoxLocationButton">
-                    <span class="irOnly">위치 설정</span>
-                    <i class="fa-solid fa-caret-down arrowRotate0"></i>
-                </button>
-                <button class="headerBoxLocationSetButton">
-                    <i class="fa-solid fa-location-crosshairs"></i>
-                    <span>Detec current location</span>
-                    <span>Using GPS</span>
-                </button>
-            </div>
-            <form class="headerBoxForm" action="/">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <label class="irOnly" for="search">search</label>
-                <input id="search" type="text" placeholder="Search for restaurant, cuisine or a dish">
-            </form>
-        </div>
-        <div class="articleWrapper loginWrapper">
+        <!-- <div class="articleWrapper loginWrapper">
             <article class="articleContent articleLogin">
                 <div>
                     <h2>Log in</h2>
@@ -164,6 +188,10 @@
                         <label class="signupName" for="signupName">Full Name</label>
                         <input id="signupName" type="text" pattern="[a-zA-Z]{1,30}$">
                         <p>Please enter a valid name</p>
+                        // <button>
+                        // <span class="irOnly">erase</span>
+                        // <i class="fa-solid fa-x"></i>
+                        // </button>
                     </fieldset>
                     <fieldset class="articleFormFieldset emailField">
                         <legend class="irOnly">enter email</legend>
@@ -174,22 +202,60 @@
                     <fieldset class="termField">
                         <label class="irOnly" for="termInput">약관 동의 여부</label>
                         <input id="termInput" type="checkbox">
-                        <p>I agree to Zomato's <a href="/">Terms of Service</a>, <a href="/">Privacy Policy</a> and <a href="/">Content Policies</a></p>
+                        <p>I agree to Zomato's <a href="/">Terms of Service</a>, <a href="/">Privacy Policy</a> and <a
+                                href="/">Content Policies</a></p>
                     </fieldset>
                     <button class="buttonCreateAccount">Create account</button>
                 </form>
                 <span class="divide">or</span>
                 <a class="googleLink" href="/">
-                    <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="">
+                    <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"
+                        alt="">
                     Continue with Google
                 </a>
                 <p class="already">Already have an account?</p>
                 <button class="loginButton">Log in</button>
             </article>
-        </div>
+        </div> -->
     </header>
     <main>
-        <section class="container section01">
+        <section class="sectionCategory">
+            <div class="container">
+                <header class="irOnly">
+                    <h2>카테고리 선택</h2>
+                </header>
+                <ul class="categoryList">
+                    <li>
+                        <button class="selected">
+                            <span class="imageBox">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png"
+                                    alt="">
+                            </span>
+                            <span>Delivery</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span class="imageBox">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png"
+                                    alt="">
+                            </span>
+                            <span>Dining Out</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span class="imageBox">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png"
+                                    alt="">
+                            </span>
+                            <span>Nightlife</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- <section class="container section01">
             <header class="section01Header">
                 <h3>Collections</h3>
                 <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</p>
@@ -248,15 +314,15 @@
                 <img src="" alt="">
                 <span>next</span>
             </button>
-        </section>
-        <section>
-            <header>
+        </section> -->
+        <section class="sectionFilter container">
+            <header class="irOnly">
                 <h2>filter</h2>
             </header>
-            <ul>
+            <ul class="filterList">
                 <li>
                     <button>
-                        <img src="" alt="">
+                        <i class="fas fa-sliders-h"></i>
                         <span>Filters</span>
                     </button>
                 </li>
@@ -267,139 +333,223 @@
                     <button>Pure Veg</button>
                 </li>
                 <li>
-                    <button>Cuisines</button>
-                </li>
-                <li>
-                    <button>More filters</button>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <header>
-                <h2>Inspiration for your first order</h2>
-            </header>
-            <ul>
-                <li>
                     <button>
-                        <img src="" alt="">
-                        <span>Pizza</span>
+                        <span>Cuisines</span>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
                 </li>
                 <li>
                     <button>
-                        <img src="" alt="">
-                        <span>Burger</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="" alt="">
-                        <span>Biryani</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="" alt="">
-                        <span>Cake</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="" alt="">
-                        <span>Rolls</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="" alt="">
-                        <span>Chicken</span>
+                        <span>More filters</span>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
                 </li>
             </ul>
-            <button>
-                <img src="" alt="">
-                <span>next</span>
-            </button>
         </section>
-        <section>
-            <header>
-                <h2>Top brands for you</h2>
-            </header>
-            <ul>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>McDonald's</span>
-                        <span>16 min</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>Burger King</span>
-                        <span>23 min</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>Bikanervala</span>
-                        <span>21 min</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>KFC</span>
-                        <span>24 min</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>Subway</span>
-                        <span>17 min</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <img src="" alt="">
-                        <span>Haldiram's</span>
-                        <span>21 min</span>
-                    </a>
-                </li>
-            </ul>
-            <button>
-                <img src="" alt="">
-                <span>next</span>
-            </button>
+        <section class="secitonInspiration sectionTheme">
+            <div class="container">
+                <header>
+                    <h2>Inspiration for your first order</h2>
+                </header>
+                <ul class="themeList">
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Pizza</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Burger</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Biryani</span>
+                        </button class="themeItem">
+                    </li>
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Cake</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Rolls</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Chicken</span>
+                        </button>
+                    </li>
+                </ul>
+                <!-- <button>
+                    <img src="" alt="">
+                    <span>next</span>
+                </button> -->
+            </div>
         </section>
-        <section>
+        <section class="sectionTheme">
+            <div class="container">
+                <header>
+                    <h2>Top brands for you</h2>
+                </header>
+                <ul class="themeList">
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>McDonald's</span>
+                            <span>16 min</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Burger King</span>
+                            <span>23 min</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Bikanervala</span>
+                            <span>21 min</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>KFC</span>
+                            <span>24 min</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Subway</span>
+                            <span>17 min</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="themeItem">
+                            <img src="https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png"
+                                alt="">
+                            <span>Haldiram's</span>
+                            <span>21 min</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <button>
+                    <img src="" alt="">
+                    <span>next</span>
+                </button> -->
+            </div>
+        </section>
+        <section class="container sectionRecommend">
             <header>
                 <h2>Delivery Restaurants in Sector 29</h2>
             </header>
-            <ul>
+            <ul class="recommendList">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <section>
-                            <header>
-                                <img src="" alt="">
-                                <h3>Kaleva</h3>
-                                <p>3.8</p>
+                            <header class="recommendHeader">
+                                <img src="https://b.zmtcdn.com/data/pictures/0/19501130/f0013075d44b690400171a19ead77e77_o2_featured_v2.jpg"
+                                    alt="">
+                                <div class="recommendHeaderWrapper">
+                                    <h3>Kaleva</h3>
+                                    <p>3.8
+                                        <i class="fas fa-star"></i>
+                                    </p>
+                                </div>
                             </header>
-                            <p>Mithai, South Indian, Chine</p>
-                            <p>150 for one</p>
-                            <div>
-                                <img src="" alt="">
-                                <p>1625+ orders placed from here recently</p>
-                                <img src="" alt="">
+                            <div class="recommendItemContent">
+                                <p>Mithai, South Indian, Chine</p>
+                                <p>150 for one</p>
                             </div>
+                            <div class="recommendItemExtra">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png" alt="">
+                                <p>1625+ orders placed from here recently</p>
+                                <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png" alt="">
+                            </div>
+                            <p class="sale">50% OFF up to 100</p>
+                            <p class="deliverTime">34min</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <section>
+                            <header class="recommendHeader">
+                                <img src="https://b.zmtcdn.com/data/pictures/0/19501130/f0013075d44b690400171a19ead77e77_o2_featured_v2.jpg"
+                                    alt="">
+                                <div class="recommendHeaderWrapper">
+                                    <h3>Kaleva</h3>
+                                    <p>3.8
+                                        <i class="fas fa-star"></i>
+                                    </p>
+                                </div>
+                            </header>
+                            <div class="recommendItemContent">
+                                <p>Mithai, South Indian, Chine</p>
+                                <p>150 for one</p>
+                            </div>
+                            <div class="recommendItemExtra">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png" alt="">
+                                <p>1625+ orders placed from here recently</p>
+                                <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png" alt="">
+                            </div>
+                            <p class="sale">50% OFF up to 100</p>
+                            <p class="deliverTime">34min</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <section>
+                            <header class="recommendHeader">
+                                <img src="https://b.zmtcdn.com/data/pictures/0/19501130/f0013075d44b690400171a19ead77e77_o2_featured_v2.jpg"
+                                    alt="">
+                                <div class="recommendHeaderWrapper">
+                                    <h3>Kaleva</h3>
+                                    <p>3.8
+                                        <i class="fas fa-star"></i>
+                                    </p>
+                                </div>
+                            </header>
+                            <div class="recommendItemContent">
+                                <p>Mithai, South Indian, Chine</p>
+                                <p>150 for one</p>
+                            </div>
+                            <div class="recommendItemExtra">
+                                <img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png" alt="">
+                                <p>1625+ orders placed from here recently</p>
+                                <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png" alt="">
+                            </div>
+                            <p class="deliverTime">34min</p>
                         </section>
                     </a>
                 </li>
             </ul>
         </section>
-        <section>
+        <!-- <section>
             <header>
                 <h2>Best Dining Restaurants near you in Sector 29</h2>
             </header>
@@ -423,8 +573,8 @@
                 <p>End of search results</p>
                 <img src="" alt="">
             </div>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
             <header>
                 <h2>Nightlife Restaurants in Sector 29</h2>
             </header>
@@ -448,15 +598,15 @@
                 <p>End of search results</p>
                 <img src="" alt="">
             </div>
-        </section>
-        <article>
+        </section> -->
+        <!-- <article>
             <header>
                 <a href="">
                     <h2>up</h2>
                     <img src="" alt="">
                 </a>
             </header>
-        </article>
+        </article> -->
         <section class="container section03">
             <header class="section03Header">
                 <h3>Explore options near me</h3>

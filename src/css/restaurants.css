@@ -1,0 +1,1034 @@
+@font-face {
+    font-family: 'helvetica';
+    src: url('../../assets/fonts_test/Helvetica Extended Heavy.ttf') format('truetype');
+}
+
+body {
+    font-family: 'helvetica';
+    /* background-color: #f8f8f8; */
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.irOnly {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.arrowRotate180 {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+.arrowRotate0 {
+    transform: rotate(0deg);
+    transition: all 0.3s;
+}
+
+.show {
+    display: block !important;
+}
+
+.showGrid {
+    display: grid !important;
+}
+
+.buttonSelected {
+    background-color: rgb(237, 244, 255);
+}
+
+.articleForm .articleFormFieldset {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    vertical-align: top;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.articleForm .articleFormFieldset > p {
+    display: none;
+    position: absolute;
+    color: rgb(224, 53, 70);
+    font-size: 11px;
+    bottom: -15px;
+}
+
+.articleForm .articleFormFieldset > label {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ccc;
+    background-color: white;
+    top: 16px;
+    left: 5px;
+    padding: 0 7px;
+}
+
+.articleForm .articleFormFieldset > input {
+    padding: 8px 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.pageHeader {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pageHeader .upperWrapper {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin-bottom: 12px;
+}
+
+.pageHeader h1 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.pageHeader .headerModals {
+    margin-left: auto;
+    display: flex;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.pageHeader .headerModals>li+li {
+    margin-left: 20px;
+}
+
+.pageHeader .headerModals .headerModalItem {
+    display: inline-block;
+    padding: 8px;
+    color: #aaa
+}
+
+.pageHeader .headerBox {
+    width: 704px;
+    height: 54px;
+    padding: 17px 10px;
+    color: black;
+    border-radius: 8px;
+    display: flex;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px 2px #eee;
+    margin-left: 30px;
+}
+
+.pageHeader .headerBox .headerBoxLocation {
+    display: flex;
+    align-items: center;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.pageHeader .headerBox .headerBoxLocation>i {
+    color: lightcoral;
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.pageHeader .headerBox .headerBoxLocation>input {
+    padding: 0 15px 0 5px;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationButton {
+    margin-right: 9px;
+    color: #333;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -10px;
+    width: 360px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 18px 18px 18px 15px;
+    text-align: left;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>i {
+    font-size: 14px;
+    line-height: 25px;
+    margin-right: 7px;
+    color: lightcoral;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>span:nth-child(2) {
+    font-size: 17px;
+    line-height: 25px;
+    color: lightcoral;
+}
+
+.pageHeader .headerBox .headerBoxLocation .headerBoxLocationSetButton>span:nth-child(3) {
+    display: block;
+    margin-left: 26px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #aaa;
+}
+
+.pageHeader .headerBox .headerBoxForm {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border-left: 2px solid #ddd;
+}
+
+.pageHeader .headerBox .headerBoxForm>i {
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+.pageHeader .headerBox .headerBoxForm>input {
+    font-size: 16px;
+    margin-left: 16px;
+    flex-grow: 1;
+}
+
+.pageHeader .articleForm .articleFormFieldset {
+    margin-bottom: 25px;
+}
+
+.pageHeader .articleForm .termField {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+}
+
+.pageHeader .articleForm .termField input {
+    width: 18px;
+    height: 18px;
+    margin: 0 8px 0 4px;
+}
+
+.pageHeader .articleForm .termField p {
+    display: inline;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.pageHeader .articleForm .termField p > a {
+    color: crimson;
+}
+
+.pageHeader .articleForm .buttonCreateAccount {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background-color: rgb(206, 206, 206);
+    border-radius: 7px;
+}
+
+.pageHeader .articleWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: rgb(155, 155, 155);
+    animation: appearArticle 0.3s;
+}
+
+.pageHeader .articleWrapper .articleContent {
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+    text-align: left;
+}
+
+.pageHeader .articleWrapper .articleContent > div {
+    color: rgb(79, 79, 79);
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.pageHeader .articleWrapper .articleContent > div > h2 {
+    font-size: 30px;
+}
+
+.pageHeader .articleWrapper .articleContent > div > button {
+    font-size: 16px;
+}
+
+.pageHeader .articleWrapper .articleContent .divide {
+    display: block;
+    margin: 9px 0;
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.pageHeader .articleWrapper .articleContent .divide::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: calc(50% - 15px);
+    left: 0;
+    top: 15px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.pageHeader .articleWrapper .articleContent .divide::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: calc(50% - 15px);
+    right: 0;
+    top: 15px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.pageHeader .signupWrapper .articleSignup .googleLink {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    color: rgb(125, 125, 125);
+    line-height: 24px;
+    padding: 12px;
+}
+
+.pageHeader .signupWrapper .articleSignup .googleLink > img {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+
+.pageHeader .signupWrapper .articleSignup .already {
+    display: inline;
+    font-size: 18px;
+    line-height: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.pageHeader .signupWrapper .articleSignup .loginButton {
+    display: inline;
+    font-size: 18px;
+    line-height: 10px;
+    color: rgb(239, 79, 95);
+    margin-left: 5px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone {
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 10px 10px;
+    border-radius: 7px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .selectPhone {
+    line-height: 30px;
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .selectPhone > img {
+    width: 23px;
+    height: 20px;
+    object-fit: cover;
+    vertical-align: -4px;
+    margin-right: 15px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .selectPhone > i {
+    font-size: 12px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone > ul {
+    position: absolute;
+    top: 60px;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    margin-left: -10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    overflow-y: scroll;
+    z-index: 30;
+    display: none;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .countryList > li > button {
+    width: 100%;
+    height: 35px;
+    padding: 7px 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .countryList > li > button > img {
+    width: 30px;
+    height: 20px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .countryList > li > button .country {
+    margin-left: 10px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone .countryList > li > button .number {
+    margin-left: auto;
+    color: black;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone > input {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 0 11px;
+}
+
+.pageHeader .loginWrapper .articleLogin .loginFieldSetPhone > input::placeholder {
+    color: #ccc;
+}
+
+.pageHeader .loginWrapper .articleLogin > form .buttonSendOneTimePassword {
+    width: 100%;
+    line-height: 44px;
+    background-color: rgb(239, 79, 95);
+    border-radius: 7px;
+    color: white;
+}
+
+.pageHeader .loginWrapper .articleLogin .continueEmail {
+    width: 100%;
+    margin-top: 10px;
+    line-height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.pageHeader .loginWrapper .articleLogin .continueEmail > i {
+    font-size: 24px;
+    vertical-align: -4px;
+    margin-right: 10px;
+    color: rgb(239, 79, 95);
+}
+
+.pageHeader .loginWrapper .articleLogin .continueGoogle {
+    width: 100%;
+    margin: 24px 0 30px;
+    line-height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.pageHeader .loginWrapper .articleLogin .continueGoogle > i {
+    font-size: 22px;
+    vertical-align: -3px;
+    margin-right: 10px;
+    color: rgb(239, 79, 95);
+}
+
+.pageHeader .loginWrapper .articleLogin .createAccount {
+    border-top: 1px solid #eee;
+    padding-top: 24px;
+    color: #777;
+}
+
+.pageHeader .loginWrapper .articleLogin .createAccount > a {
+    color: rgb(239, 79, 95);
+}
+
+.pageHeader .headerPathes {
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    color: #828282;
+}
+
+.pageHeader .headerPathes p {
+    display: inline-block;
+    color: #ccc;
+}
+
+.pageHeader .headerPathes li + li::before {
+    content: "/";
+    display: inline-block;
+    vertical-align: middle;
+    color: #555;
+    margin: 0 5px;
+}
+
+.sectionCategory {
+    border-bottom: 1px solid #eee;
+}
+
+.sectionCategory .categoryList {
+    display: flex;
+    gap: 10px
+}
+
+.sectionCategory .categoryList > li > button {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sectionCategory .categoryList > li > button .imageBox {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding-top: 15px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    margin-right: 7px;
+}
+
+.sectionCategory .categoryList > li > button .imageBox > img {
+    width: 30px;
+    height: 30px;
+}
+
+.sectionCategory .categoryList > li > button span:nth-child(2) {
+    font-size: 20px;
+}
+
+
+.sectionCategory .categoryList > li > button.selected {
+    border-bottom: 3px solid rgb(239, 79, 95);
+    color: rgb(239, 79, 95);
+}
+
+.sectionCategory .categoryList > li > button.selected .imageBox {
+    background-color: rgb(252, 238, 192);
+}
+
+
+.sectionFilter .filterList {
+    display: flex;
+    gap: 15px;
+    padding: 30px 0;
+}
+
+.sectionFilter .filterList > li > button {
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    color: #999;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.sectionFilter .filterList > li > button > i {
+    font-size: 10px;
+}
+
+
+.sectionTheme {
+    padding: 40px 0;
+    position: relative;
+}
+
+.sectionTheme h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.sectionTheme .themeList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTheme .themeList .themeItem  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionTheme .themeList .themeItem img  {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 12px;
+}
+
+.sectionTheme .themeList .themeItem span:nth-child(2)  {
+    font-size: 18px;
+}
+
+.sectionTheme .themeList .themeItem span:nth-child(3)  {
+    font-size: 14px;
+    color: #999;
+    margin-top: 12px;
+}
+
+
+.secitonInspiration {
+    background-color: #fafafa;
+}
+
+.sectionRecommend {
+    margin-top: 10px;
+}
+
+.sectionRecommend h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.sectionRecommend .recommendList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sectionRecommend .recommendList > li {
+    width: 350px;
+}
+
+.sectionRecommend .recommendList > li + li {
+    margin-left: auto;
+}
+
+.sectionRecommend .recommendList a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+.sectionRecommend .recommendList a:hover {
+    box-shadow: 0 0 10px 10px #eee
+}
+
+.sectionRecommend .recommendList section {
+    position: relative;
+}
+
+.sectionRecommend .recommendList .recommendHeader img {
+    width: 100%;
+    height: 248px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.sectionRecommend .recommendList .recommendHeader .recommendHeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    line-height: 20px;
+}
+
+.sectionRecommend .recommendList .recommendHeader .recommendHeaderWrapper h3 {
+    font-size: 17px;
+}
+
+.sectionRecommend .recommendList .recommendHeader .recommendHeaderWrapper p {
+    font-size: 14px;
+    color: white;
+    background-color: limegreen;
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.sectionRecommend .recommendList .recommendHeader .recommendHeaderWrapper p i {
+    font-size: 8px;
+    vertical-align: 1px;
+}
+
+.sectionRecommend .recommendList .recommendItemContent {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 21px;
+    color: #aaa;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.sectionRecommend .recommendList .recommendItemExtra {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.sectionRecommend .recommendList .recommendItemExtra > img:nth-child(1) {
+    width: 18px;
+    height: 18px;
+}
+
+.sectionRecommend .recommendList .recommendItemExtra > p {
+    margin: 0 7px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.sectionRecommend .recommendList .recommendItemExtra > img:nth-child(3) {
+    width: 48px;
+    height: 18px;
+    margin-left: auto;
+}
+
+.sectionRecommend .recommendList .deliverTime {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: 12px;
+    top: 215px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 3px 5px;
+    color: rgb(54, 54, 54);
+    border-radius: 3px;
+}
+
+.sectionRecommend .recommendList .sale {
+    background-color: #256FEF;
+    position: absolute;
+    left: 0;
+    top: 218px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 5px;
+    color: white;
+    border-radius: 3px;
+}
+
+
+
+.section03 {
+    padding: 50px 0;
+}
+
+.section03 .section03Header {
+}
+
+.section03 .section03Header > h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.section03 .section03ListItem {
+    margin-top: 20px;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px #eee;
+}
+
+.section03 .section03ListItemButton {
+    width: 100%;
+    height: 66px;
+    position: relative;
+    padding: 20px 24px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: left;
+    color: #555;
+}
+
+.section03 .section03ListItemButton::after {
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 25px;
+    top: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.section03 .section03ListItemButton.normal::after {
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.section03 .section03ListItemButton.selected::after {
+    transform: rotate(225deg);
+    transition: transform 0.2s;
+}
+
+.section03 .popularList {
+    display: none;
+    width: 1100px;
+    padding: 10px 24px 20px;
+    word-break: break-all;
+}
+
+.section03 .popularList li {
+    display: inline;
+    color: #999;
+    line-height: 30px;
+}
+
+.section03 .popularList li + a {
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.section03 .popularList li + li::before {
+    content: "";
+    display: inline-block;
+    vertical-align: 10%;
+    width: 4px;
+    height: 4px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.section03 .placeList {
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    width: 1100px;
+    padding: 10px 24px 20px;
+}
+
+.section03 .placeList li {
+    color: #999;
+    line-height: 30px;
+}
+
+.footer01 {
+    padding: 48px 0 22px;
+}
+
+.footer01 > h2 {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.footer01 .footerArticleButton {
+    float: right;
+    position: relative;
+}
+
+.footer01 .footerArticleButton + .footerArticleButton {
+    margin-right: 20px;
+}
+
+.footer01 .footerArticleButton > button {
+    /* width: 115px; */
+    height: 38px;
+    padding: 5px 35px 5px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.footer01 .footerArticleButton > button::after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.footer01 .footerArticleButton > button > img {
+    width: 22px;
+    height: 14px;
+    vertical-align: top;
+    margin-right: 2px;
+    object-fit: cover;
+}
+
+.footer01 .footerArticleButton .languageList {
+    display: none;
+    width: 155px;
+    background-color: white;
+    padding: 14px;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px 0 #ccc;
+    position: absolute;
+    right: -5px;
+    bottom: 47px;
+}
+
+.footer01 .footerArticleButton .languageList::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg);
+    left: 65px;
+}
+
+.footer01 .footerArticleButton .languageList button {
+    width: 100%;
+    padding: 6px;
+    color: #777;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer01 .footerArticleButton .languageList button:hover {
+    background-color: #eee;
+}
+
+.footer01 .footerArticleButton .countryList {
+    display: none;
+    width: 650px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px 0 #ccc;
+    position: absolute;
+    right: -100px;
+    bottom: 47px;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.footer01 .footerArticleButton .countryList::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg);
+    bottom: -13px;
+    right: 150px;
+}
+
+.footer01 .footerArticleButton .countryList button {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    color: #777;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer01 .footerArticleButton .countryList button > img {
+    width: 24px;
+    height: 20px;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.footer01 .footerArticleButton .countryList button > span {
+    line-height: 16px;
+}
+
+.footer01 .footerArticleButton .countryList button:hover {
+    background-color: #eee;
+}
+
+.footer01 .footer01LargeList {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.footer01 .footer01LargeList {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.footer01 .footer01LargeList .footer01LargeListItem {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.footer01 .footer01LargeList .footer01LargeListItem .footer01ListItemHeader {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer01 .footer01LargeList .footer01LargeListItem:nth-child(3) > p:nth-child(4) {
+    margin-top: 30px;
+}
+
+.footer01 .footer01LargeList .footer01LargeListItem .footer01ListItemTitle {
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.footer01 .socialNetwork {
+    font-size: 22px;
+}
+
+.footer01 .socialNetwork .socialNetworkList {
+    margin-bottom: 20px;
+}
+
+.footer01 .socialNetwork .socialNetworkList li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.footer01 .socialNetwork .socialNetworkList .socialLink {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer01 .socialNetwork .socialNetworkList .socialLink > i {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px black;
+}
+
+.footer01 .footer01AppLink a {
+    display: inline-block;
+    width: 137px;
+    height: 40px;
+}
+
+.footer01 .footer01AppLink a + a {
+    margin-top: 10px;
+}
+
+.footer01 .footer01AppLink a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer01 small {
+    display: inline-block;
+    padding: 23px 0 13px;
+    font-size: 13px;
+    line-height: 17px;
+    color: #777;
+    border-top: 1px solid #eee;
+}
