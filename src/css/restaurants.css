@@ -481,6 +481,93 @@ body {
     margin: 0 5px;
 }
 
+.section01 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section01 .section01Header {
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.section01 .section01Header>h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    margin-bottom: 5px;
+}
+
+.section01 .section01Header>p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #888;
+}
+
+.section01 .section01Header>a {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    line-height: 24px;
+    color: lightpink;
+}
+
+.section01 .section01Header>a>i {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.section01 .section01List {
+    display: flex;
+    gap: 10px;
+}
+
+.section01 .section01List .section01ListItem {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox {
+    display: inline-block;
+    position: relative;
+    height: 320px;
+    border-radius: 5px;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox .section01TextWrap {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 7px 15px 10px;
+    color: white;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox .section01TextWrap>p:first-child {
+    font-size: 18px;
+    line-height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox .section01TextWrap>p:nth-child(2) {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section01 .section01List .section01ListItem .section01ListItemBox .section01TextWrap>i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
 .sectionCategory {
     border-bottom: 1px solid #eee;
 }
@@ -544,6 +631,266 @@ body {
     font-size: 10px;
 }
 
+.sectionFilter .filterModal {
+    width: 700px;
+    /* height: 576px; */
+    /* background-color: aqua; */
+    border-radius: 6px;
+    border: 1px solid #aaa;
+
+    display: grid;
+    grid-template-columns: 180px 520px;
+    grid-template-areas:
+        "header header"
+        "left right"
+        "footer footer"
+    ;
+}
+
+.sectionFilter .filterModal .filterModalHeader {
+    grid-area: header;
+    height: 72px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+}
+
+.sectionFilter .filterModal .filterModalHeader h3 {
+    font-size: 24px;
+}
+
+.sectionFilter .filterModal .filterModalMenu {
+    grid-area: left;
+    width: 180px;
+}
+
+.sectionFilter .filterModal .filterModalMenu button {
+    padding-left: 24px;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    font-size: 18px;
+    background-color: rgb(248, 248, 248);
+}
+
+.sectionFilter .filterModal .filterModalMenu button.selected {
+    background-color: white;
+    border-left: 4px solid rgb(255, 126, 139);
+}
+
+.sectionFilter .filterModal .filterModalMenu button span {
+    display: block;
+    font-size: 14px;
+    color: rgb(239, 79, 95);
+}
+
+.sectionFilter .filterModal .filterModalContent {
+    grid-area: right;
+}
+
+.sectionFilter .filterModal .filterModalContent .filterModalContentArea {
+    height: 400px;
+    padding: 20px;
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy fieldset {
+    display: flex;
+    margin-bottom: 24px;
+    color: #1c1c1c;
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy input[type="radio"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    background-color: white;
+    font: inherit;
+    color: currentColor;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy input[type="radio"]:hover {
+    border: 1px solid rgb(239, 79, 95);
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    transform: scale(0);
+    box-shadow: inset 1em 1em rgb(239, 79, 95);
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy input[type="radio"]:checked {
+    border: 2px solid rgb(239, 79, 95);
+}
+
+.sectionFilter .filterModal .filterModalContent .sortBy input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesSearch {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    padding: 13px 0;
+    align-items: center;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesSearch > i:first-child {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesSearch > input::placeholder {
+    color: #ccc;
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesSearch > i:last-child {
+    margin-left: auto;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+    color: #777;
+}
+
+.sectionFilter .filterModal .filterModalContent .cuisines .cuisinesList li {
+    margin: 12px 0;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersSearch {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    padding: 13px 0;
+    align-items: center;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersSearch > i:first-child {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersSearch > input::placeholder {
+    color: #ccc;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersSearch > i:last-child {
+    margin-left: auto;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #777;
+}
+
+.sectionFilter .filterModal .filterModalContent .moreFilters .moreFiltersList li {
+    margin: 12px 0;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating p:first-child {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating p:nth-child(2) {
+    font-size: 18px;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating p:first-child {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating .ratingList {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating .ratingList button {
+    font-size: 12px;
+    color: #131313;
+}
+
+.sectionFilter .filterModal .filterModalContent .rating .ratingList button.bar {
+    width: 35px;
+    height: 4px;
+    background-color: rgb(239, 79, 95);
+}
+
+.sectionFilter .filterModal .filterModalContent .rating .ratingList button.target {
+    
+}
+
+
+
+.sectionFilter .filterModal .filterModalContent .contPerPerson p:first-child {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sectionFilter .filterModal .filterModalContent .contPerPerson p:nth-child(2) {
+    font-size: 18px;
+}
+
+
+
+
+.sectionFilter .filterModal .filterModalFooter {
+    grid-area: footer;
+    height: 74px;
+    padding: 15px;
+    border-top: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.sectionFilter .filterModal .buttonClear {
+    margin-left: auto;
+    color: #1c1c1c;
+    width: 100px;
+    height: 44px;
+    margin-right: 12px;
+}
+
+.sectionFilter .filterModal .buttonApply {
+    width: 100px;
+    height: 44px;
+    background-color: rgb(239, 79, 95);
+    color: white;
+    border-radius: 7px;
+}
+
 
 .sectionTheme {
     padding: 40px 0;
@@ -570,6 +917,8 @@ body {
     width: 150px;
     height: 150px;
     margin-bottom: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px #eee;
 }
 
 .sectionTheme .themeList .themeItem span:nth-child(2)  {
@@ -581,7 +930,6 @@ body {
     color: #999;
     margin-top: 12px;
 }
-
 
 .secitonInspiration {
     background-color: #fafafa;
@@ -712,6 +1060,103 @@ body {
     color: white;
     border-radius: 3px;
 }
+
+
+
+.sectionRecommend2 {
+    margin-top: 10px;
+}
+
+.sectionRecommend2 h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.sectionRecommend2 .recommendList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sectionRecommend2 .recommendList > li {
+    width: 350px;
+}
+
+.sectionRecommend2 .recommendList > li + li {
+    margin-left: auto;
+}
+
+.sectionRecommend2 .recommendList a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+.sectionRecommend2 .recommendList a:hover {
+    box-shadow: 0 0 10px 10px #eee
+}
+
+.sectionRecommend2 .recommendList section {
+    position: relative;
+}
+
+.sectionRecommend2 .recommendList .recommendHeader img {
+    width: 100%;
+    height: 248px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.sectionRecommend2 .recommendList .recommendHeader .recommendHeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    line-height: 20px;
+}
+
+.sectionRecommend2 .recommendList .recommendHeader .recommendHeaderWrapper h3 {
+    font-size: 17px;
+}
+
+.sectionRecommend2 .recommendList .recommendHeader .recommendHeaderWrapper p {
+    font-size: 14px;
+    color: white;
+    background-color: limegreen;
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.sectionRecommend2 .recommendList .recommendHeader .recommendHeaderWrapper p i {
+    font-size: 8px;
+    vertical-align: 1px;
+}
+
+.sectionRecommend2 .recommendList .recommendItemContent {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.sectionRecommend2 .recommendList .recommendItemExtra {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.sectionRecommend2 .recommendList .recommendItemLength {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: 12px;
+    top: 215px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 3px 5px;
+    color: rgb(54, 54, 54);
+    border-radius: 3px;
+}
+
 
 
 
