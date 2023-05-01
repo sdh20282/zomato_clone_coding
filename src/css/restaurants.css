@@ -484,6 +484,7 @@ body {
 .section01 {
     padding-top: 30px;
     padding-bottom: 30px;
+    display: none;
 }
 
 .section01 .section01Header {
@@ -612,6 +613,16 @@ body {
     background-color: rgb(252, 238, 192);
 }
 
+.filterContainer {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    z-index: 100;
+}
 
 .sectionFilter .filterList {
     display: flex;
@@ -637,6 +648,7 @@ body {
     /* background-color: aqua; */
     border-radius: 6px;
     border: 1px solid #aaa;
+    background-color: white;
 
     display: grid;
     grid-template-columns: 180px 520px;
@@ -645,6 +657,11 @@ body {
         "left right"
         "footer footer"
     ;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sectionFilter .filterModal .filterModalHeader {
@@ -692,6 +709,7 @@ body {
 .sectionFilter .filterModal .filterModalContent .filterModalContentArea {
     height: 400px;
     padding: 20px;
+    display: none;
 }
 
 .sectionFilter .filterModal .filterModalContent .sortBy fieldset {
@@ -1065,6 +1083,7 @@ body {
 
 .sectionRecommend2 {
     margin-top: 10px;
+    display: none;
 }
 
 .sectionRecommend2 h2 {
@@ -1157,11 +1176,10 @@ body {
     border-radius: 3px;
 }
 
-
-
-
 .section03 {
     padding: 50px 0;
+    display: none;
+    
 }
 
 .section03 .section03Header {

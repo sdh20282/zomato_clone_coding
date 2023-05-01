@@ -321,7 +321,7 @@
             </header>
             <ul class="filterList">
                 <li>
-                    <button>
+                    <button class="filterButton">
                         <i class="fas fa-sliders-h"></i>
                         <span>Filters</span>
                     </button>
@@ -345,162 +345,164 @@
                     </button>
                 </li>
             </ul>
-            <section class="filterModal">
-                <header class="filterModalHeader">
-                    <h3>Filters</h3>
-                    <button>
-                        <span class="irOnly">close</span>
-                        <i class="fa-solid fa-x"></i>
-                    </button>
-                </header>
-                <ul class="filterModalMenu">
-                    <li>
-                        <button class="selected">
-                            Sort by
-                            <span>Popularrity</span>
+            <div class="filterContainer">
+                <section class="filterModal">
+                    <header class="filterModalHeader">
+                        <h3>Filters</h3>
+                        <button>
+                            <span class="irOnly">close</span>
+                            <i class="fa-solid fa-x"></i>
                         </button>
-                    </li>
-                    <li>
-                        <button>Cuisines</button>
-                    </li>
-                    <li>
-                        <button>Rating</button>
-                    </li>
-                    <li>
-                        <button>Cost per person</button>
-                    </li>
-                    <li>
-                        <button>Morefilters</button>
-                    </li>
-                </ul>
-                <ul class="filterModalContent">
-                    <li class="filterModalContentArea sortBy">
-                        <form>
-                            <fieldset>
-                                <input id="sortByInput1" type="radio" name="sortBy" checked>
-                                <label for="sortByInput1">Popularity</label>
-                            </fieldset>
-                            <fieldset>
-                                <input id="sortByInput2" type="radio" name="sortBy">
-                                <label for="sortByInput2">Rating: High to Low</label>
-                            </fieldset>
-                            <fieldset>
-                                <input id="sortByInput3" type="radio" name="sortBy">
-                                <label for="sortByInput3">Delivery Time</label>
-                            </fieldset>
-                            <fieldset>
-                                <input id="sortByInput4" type="radio" name="sortBy">
-                                <label for="sortByInput4">Cost: Low to High</label>
-                            </fieldset>
-                            <fieldset>
-                                <input id="sortByInput5" type="radio" name="sortBy">
-                                <label for="sortByInput5">Cost: High to Low</label>
-                            </fieldset>
-                        </form>
-                    </li>
-                    <li class="filterModalContentArea cuisines">
-                        <form action="">
-                            <fieldset class="cuisinesSearch">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <label class="irOnly" for="cuisineSearch"></label>
-                                <input type="text" id="cuisineSearch" placeholder="Search here">
-                                <i class="fa-solid fa-x"></i>
-                            </fieldset>
-                            <fieldset>
-                                <ul class="cuisinesList">
-                                    <li>
-                                        <input type="checkbox" name="" id="cuisineAfghan">
-                                        <label for="cuisineAfghan">Afghan</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="" id="cuisineAfrican">
-                                        <label for="cuisineAfrican">African</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="" id="cuisineAmerican">
-                                        <label for="cuisineAmerican">American</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="" id="cuisineAndhra">
-                                        <label for="cuisineAndhra">Andhra</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </form>
-                    </li>
-                    <li class="filterModalContentArea rating">
-                        <p>Rating</p>
-                        <p>Any</p>
-                        <ul class="ratingList">
-                            <li>
-                                <button class="target">Any</button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="target">3.5</button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="target">4.0</button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="target">4.5</button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="bar"></button>
-                            </li>
-                            <li>
-                                <button class="target">5.0</button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="filterModalContentArea contPerPerson">
-                        <p>Cost per person</p>
-                        <p>Any</p>
-                    </li>
-                    <li class="filterModalContentArea moreFilters">
-                        <form action="">
-                            <fieldset class="moreFiltersSearch">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <label class="irOnly" for="cuisineSearch"></label>
-                                <input type="text" id="moreFiltersSearch" placeholder="Search here">
-                                <i class="fa-solid fa-x"></i>
-                            </fieldset>
-                            <fieldset>
-                                <ul class="moreFiltersList">
-                                    <li>
-                                        <input type="checkbox" name="" id="moreFiltersGreatOffers">
-                                        <label for="moreFiltersGreatOffers">Great Offers</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </form>
-                    </li>
-                </ul>
-                <div class="filterModalFooter">
-                    <button class="buttonClear">Clear all</button>
-                    <button class="buttonApply">Apply</button>
-                </div>
-            </section>
+                    </header>
+                    <ul class="filterModalMenu">
+                        <li>
+                            <button class="selected">
+                                Sort by
+                                <span>Popularrity</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>Cuisines</button>
+                        </li>
+                        <li>
+                            <button>Rating</button>
+                        </li>
+                        <li>
+                            <button>Cost per person</button>
+                        </li>
+                        <li>
+                            <button>Morefilters</button>
+                        </li>
+                    </ul>
+                    <ul class="filterModalContent">
+                        <li class="filterModalContentArea show sortBy">
+                            <form>
+                                <fieldset>
+                                    <input id="sortByInput1" type="radio" name="sort" checked>
+                                    <label for="sortByInput1">Popularity</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input id="sortByInput2" type="radio" name="sort">
+                                    <label for="sortByInput2">Rating: High to Low</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input id="sortByInput3" type="radio" name="sort">
+                                    <label for="sortByInput3">Delivery Time</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input id="sortByInput4" type="radio" name="sort">
+                                    <label for="sortByInput4">Cost: Low to High</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input id="sortByInput5" type="radio" name="sort">
+                                    <label for="sortByInput5">Cost: High to Low</label>
+                                </fieldset>
+                            </form>
+                        </li>
+                        <li class="filterModalContentArea cuisines">
+                            <form action="">
+                                <fieldset class="cuisinesSearch">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <label class="irOnly" for="cuisineSearch"></label>
+                                    <input type="text" id="cuisineSearch" placeholder="Search here">
+                                    <i class="fa-solid fa-x"></i>
+                                </fieldset>
+                                <fieldset>
+                                    <ul class="cuisinesList">
+                                        <li>
+                                            <input type="checkbox" name="" id="cuisineAfghan">
+                                            <label for="cuisineAfghan">Afghan</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="" id="cuisineAfrican">
+                                            <label for="cuisineAfrican">African</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="" id="cuisineAmerican">
+                                            <label for="cuisineAmerican">American</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="" id="cuisineAndhra">
+                                            <label for="cuisineAndhra">Andhra</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </li>
+                        <li class="filterModalContentArea rating">
+                            <p>Rating</p>
+                            <p>Any</p>
+                            <ul class="ratingList">
+                                <li>
+                                    <button class="target">Any</button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="target">3.5</button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="target">4.0</button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="target">4.5</button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="bar"></button>
+                                </li>
+                                <li>
+                                    <button class="target">5.0</button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="filterModalContentArea contPerPerson">
+                            <p>Cost per person</p>
+                            <p>Any</p>
+                        </li>
+                        <li class="filterModalContentArea moreFilters">
+                            <form action="">
+                                <fieldset class="moreFiltersSearch">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <label class="irOnly" for="cuisineSearch"></label>
+                                    <input type="text" id="moreFiltersSearch" placeholder="Search here">
+                                    <i class="fa-solid fa-x"></i>
+                                </fieldset>
+                                <fieldset>
+                                    <ul class="moreFiltersList">
+                                        <li>
+                                            <input type="checkbox" name="" id="moreFiltersGreatOffers">
+                                            <label for="moreFiltersGreatOffers">Great Offers</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="filterModalFooter">
+                        <button class="buttonClear">Clear all</button>
+                        <button class="buttonApply">Apply</button>
+                    </div>
+                </section>
+            </div>
         </section>
         <section class="secitonInspiration sectionTheme">
             <div class="container">
@@ -1515,6 +1517,7 @@
             Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All
             rights reserved.</small>
     </footer>
+    <script src="./src/js/restaurants.js"></script>
 </body>
 
 </html>
